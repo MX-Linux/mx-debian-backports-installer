@@ -1,0 +1,43 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Wed, 07 Sep 2016 16:50:11 -0400
+Source: mx-debian-backports-installer
+Binary: mx-debian-backports-installer
+Architecture: source amd64
+Version: 0.16.9mx15+1
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description:
+ mx-debian-backports-installer - mx-debian-backports-installer
+Changes:
+ mx-debian-backports-installer (0.16.9mx15+1) mx; urgency=medium
+ .
+   * test without progress bar*
+Checksums-Sha1:
+ 9ccecf21816a34c9e4a9b0c34934007e10f12949 1289 mx-debian-backports-installer_0.16.9mx15+1.dsc
+ 473855eda788e3b500d9cbbf94c91b3a16c5a83c 41708 mx-debian-backports-installer_0.16.9mx15+1.tar.xz
+ b0343e62ecc4e57f3e3d64cdc5aef7b2c368b96d 41078 mx-debian-backports-installer_0.16.9mx15+1_amd64.deb
+Checksums-Sha256:
+ 99aa3f060c288a69805780c411ac092b0110ada0279ff8b45f56f321dc234936 1289 mx-debian-backports-installer_0.16.9mx15+1.dsc
+ f528cdc6d57efa599a1c3fdcada65ed4aec7b691056345ff05d95ba1fda8d46f 41708 mx-debian-backports-installer_0.16.9mx15+1.tar.xz
+ 784da479729696d0ee9de5390c2390355ecbe757a8c6c020015b506ab4a5c50f 41078 mx-debian-backports-installer_0.16.9mx15+1_amd64.deb
+Files:
+ beb05a0733c25d741231b03a1c0b0c83 1289 admin optional mx-debian-backports-installer_0.16.9mx15+1.dsc
+ baa9242085ce5ba471ecdb30f5541bf9 41708 admin optional mx-debian-backports-installer_0.16.9mx15+1.tar.xz
+ 8a7de0c03acfa5f8250bcb311b70c8b1 41078 admin optional mx-debian-backports-installer_0.16.9mx15+1_amd64.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJX0H7bAAoJEHCTjHgGee6YFLgH/RuGhtFtfGn2xRMTXYBCLPk5
+ly2JVPhcdoYw6EHGXrDPKiRzvATJ1eSodmLEukqHY8lcIHVHX+QgrKmHN70YqZTc
+/kYtVc2vy2kVOSJXdA0AQoQRYzownx0miZP6T0U6C92PGhEURg0cltNctiaYhxxR
+ZiTUPuDFdFqktnsOPUbgG55/X/CHhWiIwxlL8swf9FEKz4OwkX+8+/G8arxJoDQX
+9OX0BRTPayQ9WhPsbzGOuDABm5Ou6XQdM+EfSXoj41D5m9u+1nXMoXURcnmZ+dxX
+6/Wp8NWbACy/ToMiQXcfjaXKMjztBOlDURyhCBK0Dt4KMWm+ZxNLNtW4Z8IQZUM=
+=d8jj
+-----END PGP SIGNATURE-----
