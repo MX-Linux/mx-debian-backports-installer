@@ -1,0 +1,6 @@
+mx-debian-backports-installer 		usr/bin
+mx-debian-backports-installer.desktop	 	usr/share/applications/mx
+icons/*                 		usr/share/mx-debian-backports-installer/icons
+translations/*				usr/share/mx-debian-backports-installer/locale
+license.html            		usr/share/doc/mx-debian-backports-installer
+*.sh					usr/local/bin
