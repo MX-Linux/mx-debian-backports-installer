@@ -113,7 +113,7 @@ void MainWindow::displayMXlist(QStringList mxlist)
     QTreeWidgetItem *widget_item;
 
     //system("notify-send -i application-x-deb 'Test Repo Installer' 'List Packages'");
-    startProgressBar();
+    //startProgressBar();
     ui->treeWidget->clear();
 
     // create a list of apps, create a hash with app_name, app_info
@@ -122,6 +122,19 @@ void MainWindow::displayMXlist(QStringList mxlist)
         app_info = item.section(" ", 1, -1);
         hashApp.insert(app_name, app_info);
         apps += app_name + " "; // all the apps
+        //app_name = item.section(" ", 0, 0);
+        app_info = hashApp[app_name];
+        app_ver = app_info.section("  ", 0, 0).trimmed();
+        app_desc = app_info.section("  ", 1, -1);
+        widget_item = new QTreeWidgetItem(ui->treeWidget);
+        widget_item->setFlags(widget_item->flags());
+        widget_item->setCheckState(0, Qt::Unchecked);
+        widget_item->setText(2, app_name);
+        widget_item->setText(3, app_ver);
+        widget_item->setText(4, app_desc);
+    }
+    for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
+        ui->treeWidget->resizeColumnToContents(i);
     }
     QString info_installed = runCmd("LC_ALL=en_US.UTF-8 apt-cache policy " + apps + "|grep Candidate -B2").str; // intalled app info
     app_info_list = info_installed.split("--"); // list of installed apps
@@ -134,22 +147,19 @@ void MainWindow::displayMXlist(QStringList mxlist)
         hashInstalled.insert(app_name, installed);
         hashCandidate.insert(app_name, candidate);
     }
+    for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
+        ui->treeWidget->resizeColumnToContents(i);
+    }
     // process the entire list of apps
-    foreach(item, mxlist) {
-        app_name = item.section(" ", 0, 0);
-        app_info = hashApp[app_name];
-        app_ver = app_info.section("  ", 0, 0).trimmed();
-        app_desc = app_info.section("  ", 1, -1);
+    QTreeWidgetItemIterator it(ui->treeWidget);
+    while (*it) {
+        widget_item = (*it);
+        app_name = widget_item->text(2);
+        app_ver = widget_item->text(3);
         installed = hashInstalled[app_name];
-        widget_item = new QTreeWidgetItem(ui->treeWidget);
-        widget_item->setFlags(widget_item->flags());
-        widget_item->setCheckState(0, Qt::Unchecked);
-        widget_item->setText(2, app_name);
-        widget_item->setText(3, app_ver);
-        widget_item->setText(4, app_desc);
         candidate = hashCandidate[app_name];
-        //qDebug() << installed.toString();
-        //qDebug() << candidate.toString();
+        //qDebug() << "installed: " << installed.toString();
+        //qDebug() << "candidate: " << candidate.toString();
         VersionNumber candidatetest = QString(app_ver);
         if (installed.toString() == "(none)") {
             for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
@@ -172,12 +182,9 @@ void MainWindow::displayMXlist(QStringList mxlist)
                 }
             }
         }
+        ++it;
     }
-
-    for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
-        ui->treeWidget->resizeColumnToContents(i);
-    }
-    stopProgressBar();
+    //stopProgressBar();
 }
 
 // process keystrokes

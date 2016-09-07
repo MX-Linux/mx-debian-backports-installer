@@ -1,3 +1,9 @@
+mx-debian-backports-installer (0.16.9mx15+1) mx; urgency=medium
+
+  * test without progress bar* 
+
+ -- Adrian <adrian@mxlinux.org>  Wed, 07 Sep 2016 16:50:11 -0400
+
 mx-debian-backports-installer (0.16.9mx15) mx; urgency=medium
 
   * Initial release.
