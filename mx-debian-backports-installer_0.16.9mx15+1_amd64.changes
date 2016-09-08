@@ -18,26 +18,26 @@ Changes:
  .
    * test without progress bar*
 Checksums-Sha1:
- 16fcd776d0f851a090d3c5d716e1884de0b7e8dd 1289 mx-debian-backports-installer_0.16.9mx15+1.dsc
- 20a99c24217cda3ad116dc03149a9055918bb7a6 19736 mx-debian-backports-installer_0.16.9mx15+1.tar.xz
- b4670163a9f74b7421fdda9e8775395095074827 41610 mx-debian-backports-installer_0.16.9mx15+1_amd64.deb
+ 9dee50ba86f26ceb79e2554743f31dcf5c0db5fe 1289 mx-debian-backports-installer_0.16.9mx15+1.dsc
+ 414f33d9743fb7fa21c86921a471904645ebe647 19612 mx-debian-backports-installer_0.16.9mx15+1.tar.xz
+ bd98681a6ee7902a0a9f8587c34153f34cb85415 41378 mx-debian-backports-installer_0.16.9mx15+1_amd64.deb
 Checksums-Sha256:
- 42dd591fc750804ac0fd80b841722ff151f8caff7c9132d260b9509395e94d56 1289 mx-debian-backports-installer_0.16.9mx15+1.dsc
- 798c5c8e28b7600397af10b6e38c4a8770757f571301aecb6f43400ff829f3f2 19736 mx-debian-backports-installer_0.16.9mx15+1.tar.xz
- b55e33daea3cc38c932855139ff8494053c365ad026c3183aea489f8015bd98a 41610 mx-debian-backports-installer_0.16.9mx15+1_amd64.deb
+ d0b842c06690bac015936ca8020632be23b751066c6bc124af9120a6a34cc65b 1289 mx-debian-backports-installer_0.16.9mx15+1.dsc
+ 92664039e1106699c969b84e4902977bf15dc2b6c2d90432cef96776f57d310c 19612 mx-debian-backports-installer_0.16.9mx15+1.tar.xz
+ e69b9748ab4caa3249929e38cbae048d9202980ff1a30501990e313f83479bf9 41378 mx-debian-backports-installer_0.16.9mx15+1_amd64.deb
 Files:
- 2bcf4b1345cac121c78ccc824dca2fe9 1289 admin optional mx-debian-backports-installer_0.16.9mx15+1.dsc
- cb7f3419af3b9843d3b9c038797a6b51 19736 admin optional mx-debian-backports-installer_0.16.9mx15+1.tar.xz
- 8e37fe62c00c6d28bfdee1b45cab0a55 41610 admin optional mx-debian-backports-installer_0.16.9mx15+1_amd64.deb
+ a37278012674275febbb727841b03e74 1289 admin optional mx-debian-backports-installer_0.16.9mx15+1.dsc
+ 6a5bb2b9cab8f655c0ea8c6bc624c82f 19612 admin optional mx-debian-backports-installer_0.16.9mx15+1.tar.xz
+ dded29587b15923eadf9384e83947436 41378 admin optional mx-debian-backports-installer_0.16.9mx15+1_amd64.deb
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iQEcBAEBAgAGBQJX0NndAAoJEHCTjHgGee6YhJ0H/jhJRN85HN34y+XSCh2LN6RE
-HTwRi1NZb8PG7MoJ7O019eWySPgQhq9demadQgtabyQmaU32r+TgaEIV5y+x4AK/
-HJSLFLtpu9Y9eEgLQ+5GRG+CBoSe55Txph3bfg3FO98N/Kj/UGZVd12VcVbktaLs
-NBX2UyzGQtHdCM51ij8GulShS7M0Pj256OIszojbSlnMnY85ky3miz+sKd5hDcAf
-zjdc7LoTxpSlrYlF4X1DkL8KLRcuDcpWEZ+pF6sLw9lLNXzVo4eTWUfzPb1St0RX
-c4yI6tZ7+YfNqeGZCWP6hlNu8tB0w6S73KWQ4w7iRrdJqJacClWxb5rQIXTXtU0=
-=f8p2
+iQEcBAEBAgAGBQJX0XZHAAoJEHCTjHgGee6YVsAIAIQxi4EPXM6zZIHGccepq/TL
+Lat+w2nEi36nkHWqE64Tvt7ihNhfv47/SIjVyJWKSU5E2RbRlgK20EisM2ucdUVc
+zsDQ/EfF7HDswhWYmBhGvoWO3jwy5zsurjcVLGo3IjMwFnIVIaUIzC8m1vJhMssc
+ynqeM1YGMV0KIkZWqhO3BkT/NcnDMEoM67oawRlEvojtR+EVCPnpFftFvfnl0xIa
+CMypjGU6mDDsthx+uh18IKmQscy2MLT2LmE+RqEtxrK5RgeubZZTGjVPA4eWX850
+P8m/wxH4Sw2IrELe2eArq2HPvDNmwnpR9yqr66x2xc/RPCrRuz2M7ENIJiUOLiY=
+=hJmi
 -----END PGP SIGNATURE-----

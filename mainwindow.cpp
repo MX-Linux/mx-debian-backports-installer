@@ -42,16 +42,14 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    progress = new QProgressDialog(this);
-    ui->progressBar->setVisible(false);
-    this->show();
-    version = getVersion("mx-debian-backports-installer");
+    this->show();    
+    version = getVersion("mx-debian-backports-installer");    
     qApp->processEvents();
-    searchBox = new QLineEdit(this);
     ui->icon->setIcon(QIcon::fromTheme("software-update-available", QIcon("/usr/share/mx-debian-backports-installer/icons/software-update-available.png")));
     this->setWindowIcon(QIcon::fromTheme("application-x-deb", QIcon("/usr/share/mx-debian-backports-installer/icons/application-x-deb.png")));
-    startProgressDialog();
-    runCmd("backports-list-builder.sh");
+    startProgressBar();
+    runCmd("backports-list-builder.sh");    
+    connect(ui->searchBox,SIGNAL(textChanged(QString)),this, SLOT(findPackage()));
     start();
 }
 
@@ -138,8 +136,7 @@ void MainWindow::displayMXlist(QStringList mxlist)
     for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
         ui->treeWidget->resizeColumnToContents(i);
     }
-    stopProgress();
-    startProgressBar();
+    stopProgressBar();
     QString info_installed = runCmd("LC_ALL=en_US.UTF-8 apt-cache policy " + apps + "|grep Candidate -B2").str; // intalled app info
     app_info_list = info_installed.split("--"); // list of installed apps
     // create a hash of name and installed version
@@ -188,7 +185,6 @@ void MainWindow::displayMXlist(QStringList mxlist)
         }
         ++it;
     }
-    stopProgress();
 }
 
 // process keystrokes
@@ -202,7 +198,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
 
 void MainWindow::closeSearch()
 {
-    searchBox->close();
+    ui->searchBox->clear();
     QTreeWidgetItemIterator it(ui->treeWidget);
     while (*it) {
         (*it)->setHidden(false);
@@ -213,17 +209,13 @@ void MainWindow::closeSearch()
 // search entered text starting with the first keystroke
 void MainWindow::search()
 {
-    searchBox = new QLineEdit(this);
-    searchBox->move(this->geometry().width() - 120,this->geometry().height() - 100);
-    searchBox->setFocus();
-    searchBox->show();
-    connect(searchBox,SIGNAL(textChanged(QString)),this, SLOT(findPackage()));
+    ui->searchBox->setFocus();
 }
 
 // find packages
 void MainWindow::findPackage()
 {
-    QString word = searchBox->text();
+    QString word = ui->searchBox->text();
     QList<QTreeWidgetItem *> found_items = ui->treeWidget->findItems(word, Qt::MatchContains, 2);
     QTreeWidgetItemIterator it(ui->treeWidget);
     while (*it) {
@@ -236,8 +228,9 @@ void MainWindow::findPackage()
     }
 }
 
-void MainWindow::startProgressDialog()
+void MainWindow::startProgressBar()
 {
+    progress = new QProgressDialog(this);
     QProgressBar *bar = new QProgressBar(progress);
     progress->setWindowModality(Qt::WindowModal);
     progress->setWindowFlags(Qt::Dialog | Qt::CustomizeWindowHint | Qt::WindowTitleHint |Qt::WindowSystemMenuHint | Qt::WindowStaysOnTopHint);
@@ -253,33 +246,17 @@ void MainWindow::startProgressDialog()
     connect(timer, SIGNAL(timeout()),SLOT(procTime()));
 }
 
-void MainWindow::startProgressBar()
-{
-    ui->progressBar->setValue(0);
-    ui->progressBar->setTextVisible(false);
-    ui->progressBar->setVisible(true);
-    ui->progressBar->setTextVisible(true);
-    qApp->processEvents();
-    timer = new QTimer(this);
-    timer->start(20);
-    connect(timer, SIGNAL(timeout()),SLOT(procTime()));
-}
 
-void MainWindow::stopProgress()
+void MainWindow::stopProgressBar()
 {
     timer->stop();
     disconnect(timer, SIGNAL(timeout()), 0, 0);
     progress->close();
-    ui->progressBar->hide();
 }
 
 void MainWindow::procTime()
 {
-    progress->setValue(progress->value() + 1);
-    if (ui->progressBar->value() < 100)
-        ui->progressBar->setValue(ui->progressBar->value() + 1);
-    else
-        ui->progressBar->setValue(0);
+    progress->setValue(progress->value() + 1);    
 }
 
 void MainWindow::on_buttonCancel_clicked()

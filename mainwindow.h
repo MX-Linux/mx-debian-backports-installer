@@ -57,8 +57,7 @@ public:
     void displayMXlist(QStringList mxlist);
     void start();
     void startProgressBar();
-    void startProgressDialog();
-    void stopProgress();
+    void stopProgressBar();
 
     QString getVersion(QString name);
     Output runCmd(QString cmd);
@@ -77,7 +76,6 @@ private slots:
 private:
     QProgressDialog *progress;
     QTimer *timer;
-    QLineEdit *searchBox;
     Ui::MainWindow *ui;
     void keyPressEvent(QKeyEvent *event);
 };

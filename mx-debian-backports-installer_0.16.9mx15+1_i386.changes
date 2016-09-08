@@ -18,20 +18,20 @@ Changes:
  .
    * test without progress bar*
 Checksums-Sha1:
- de405e2528098ad1edbf9a5cf98b5654a37db0c2 42594 mx-debian-backports-installer_0.16.9mx15+1_i386.deb
+ b9ce17070ef645707057523adfe2c2b8d4dd082f 42332 mx-debian-backports-installer_0.16.9mx15+1_i386.deb
 Checksums-Sha256:
- 9ed6b61511e46a2f5aadd924375d6e51d50fe5c484f8783ad6808d98e6ad2e4c 42594 mx-debian-backports-installer_0.16.9mx15+1_i386.deb
+ 134ed1fdf9ab83739d875435f0df50d0a183a52e3f95fd8b5e89a156307a0406 42332 mx-debian-backports-installer_0.16.9mx15+1_i386.deb
 Files:
- f50fda1044f7ddfd573b5487f1d5dd42 42594 admin optional mx-debian-backports-installer_0.16.9mx15+1_i386.deb
+ aa5e3a829caad4d38b029f4831eebda1 42332 admin optional mx-debian-backports-installer_0.16.9mx15+1_i386.deb
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iQEcBAEBAgAGBQJX0No6AAoJEHCTjHgGee6YZk4IAJnCUXllzcRmyRgrbpzMfarQ
-eVWmaen1B7W+/PfJe1ByeSqFrTPyOcCv6ZDzWMDtsUq4qp4OM6lLUeEVTElXhiKl
-bxgLbPM2brmG5nfbVDYvvmhlbccKQAXlRU4il2idjihTgX726lCuu2HFe3FKKstt
-GkKxSS12BQEf5301Id93Rnbac6Xrd3pobyvc9z0pcy6Hl2O21UEey5jJzK3in0xd
-lNnB4EVrZlArIY6/eddiVIocE1u4/hQNx8sMDXr7QVhEKEzHQZyOGVtWlOzpeXM9
-FmHUtNag8nA02jrzUJrzRHF6dsZWbVd25Q0yqcZ9GRumDHLQrjgBTEh52f4FDvw=
-=ET3g
+iQEcBAEBAgAGBQJX0XbKAAoJEHCTjHgGee6YViwH/3BvMIYTAQqTReVye9FRgfYl
+p8C3vwljUb8G/SRY91gvKtaEsH15rbabSV+hC8YCKRGF21EHdAK0rIcrR8aexuVd
++TrJNrnqb7pOgN3QEzWqBiA3bpDdGQjDOLBhqV04myvYXE2qsdsHvI0XCF3JihWN
+WeU7PwgSAlp76oKkCC3aQ2DIyPzKP8yVTtJFaYqePhDia6b61qGXcZYBkWnMA00N
+3zFW4yVFG+XzHT/8HzYRWtoTT+bGrzohpeqX3sTuvco4G+khPHqn6YCAoPlU03JF
+zr63gyQfW/JiTyBnURaCesrT/o1PhLBYaFX3oE48wN3fd6oT2tYQEkhFXZK7J3o=
+=ga6y
 -----END PGP SIGNATURE-----
