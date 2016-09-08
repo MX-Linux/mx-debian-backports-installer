@@ -48,6 +48,7 @@ MainWindow::MainWindow(QWidget *parent) :
     searchBox = new QLineEdit(this);
     ui->icon->setIcon(QIcon::fromTheme("software-update-available", QIcon("/usr/share/mx-debian-backports-installer/icons/software-update-available.png")));
     this->setWindowIcon(QIcon::fromTheme("application-x-deb", QIcon("/usr/share/mx-debian-backports-installer/icons/application-x-deb.png")));
+    startProgressBar();
     runCmd("backports-list-builder.sh");
     start();
 }
@@ -113,7 +114,6 @@ void MainWindow::displayMXlist(QStringList mxlist)
     QTreeWidgetItem *widget_item;
 
     //system("notify-send -i application-x-deb 'Test Repo Installer' 'List Packages'");
-    //startProgressBar();
     ui->treeWidget->clear();
 
     // create a list of apps, create a hash with app_name, app_info
@@ -136,6 +136,7 @@ void MainWindow::displayMXlist(QStringList mxlist)
     for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
         ui->treeWidget->resizeColumnToContents(i);
     }
+    stopProgressBar();
     QString info_installed = runCmd("LC_ALL=en_US.UTF-8 apt-cache policy " + apps + "|grep Candidate -B2").str; // intalled app info
     app_info_list = info_installed.split("--"); // list of installed apps
     // create a hash of name and installed version
@@ -184,7 +185,6 @@ void MainWindow::displayMXlist(QStringList mxlist)
         }
         ++it;
     }
-    //stopProgressBar();
 }
 
 // process keystrokes
