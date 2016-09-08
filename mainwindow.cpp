@@ -164,22 +164,22 @@ void MainWindow::displayMXlist(QStringList mxlist)
         VersionNumber candidatetest = QString(app_ver);
         if (installed.toString() == "(none)") {
             for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
-                widget_item->setToolTip(i, "Version " + candidate.toString() + " in stable repo" );
+                widget_item->setToolTip(i, tr("Version ") + candidate.toString() + tr(" in stable repo"));
             }
         } else if (installed.toString() == "") {
             for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
-                widget_item->setToolTip(i, "Not available in stable repo" );
+                widget_item->setToolTip(i, tr("Not available in stable repo"));
             }
         } else {
             if (installed >= candidatetest) {
                 for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
                     widget_item->setDisabled(true);
-                    widget_item->setToolTip(i, "Latest version " + installed.toString() + " already installed");
+                    widget_item->setToolTip(i, tr("Latest version ") + installed.toString() + tr(" already installed"));
                 }
             } else {
                 widget_item->setIcon(1, QIcon::fromTheme("software-update-available", QIcon("/usr/share/mx-debian-backports-installer/icons/software-update-available.png")));
                 for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
-                    widget_item->setToolTip(i, "Version " + installed.toString() + " installed");
+                    widget_item->setToolTip(i, tr("Version ") + installed.toString() + tr(" installed"));
                 }
             }
         }
