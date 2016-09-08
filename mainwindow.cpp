@@ -42,14 +42,15 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    this->show();    
-    version = getVersion("mx-debian-backports-installer");    
+    this->show();
+    version = getVersion("mx-test-repo-installer");
     qApp->processEvents();
     ui->icon->setIcon(QIcon::fromTheme("software-update-available", QIcon("/usr/share/mx-debian-backports-installer/icons/software-update-available.png")));
     this->setWindowIcon(QIcon::fromTheme("application-x-deb", QIcon("/usr/share/mx-debian-backports-installer/icons/application-x-deb.png")));
     startProgressBar();
-    runCmd("backports-list-builder.sh");    
+    runCmd("backports-list-builder.sh");
     connect(ui->searchBox,SIGNAL(textChanged(QString)),this, SLOT(findPackage()));
+    ui->searchBox->setFocus();
     start();
 }
 
@@ -246,7 +247,6 @@ void MainWindow::startProgressBar()
     connect(timer, SIGNAL(timeout()),SLOT(procTime()));
 }
 
-
 void MainWindow::stopProgressBar()
 {
     timer->stop();
@@ -256,7 +256,7 @@ void MainWindow::stopProgressBar()
 
 void MainWindow::procTime()
 {
-    progress->setValue(progress->value() + 1);    
+    progress->setValue(progress->value() + 1);
 }
 
 void MainWindow::on_buttonCancel_clicked()
