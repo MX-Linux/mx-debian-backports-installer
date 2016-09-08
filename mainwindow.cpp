@@ -42,13 +42,15 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    progress = new QProgressDialog(this);
+    ui->progressBar->setVisible(false);
     this->show();
     version = getVersion("mx-debian-backports-installer");
     qApp->processEvents();
     searchBox = new QLineEdit(this);
     ui->icon->setIcon(QIcon::fromTheme("software-update-available", QIcon("/usr/share/mx-debian-backports-installer/icons/software-update-available.png")));
     this->setWindowIcon(QIcon::fromTheme("application-x-deb", QIcon("/usr/share/mx-debian-backports-installer/icons/application-x-deb.png")));
-    startProgressBar();
+    startProgressDialog();
     runCmd("backports-list-builder.sh");
     start();
 }
@@ -136,7 +138,8 @@ void MainWindow::displayMXlist(QStringList mxlist)
     for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
         ui->treeWidget->resizeColumnToContents(i);
     }
-    stopProgressBar();
+    stopProgress();
+    startProgressBar();
     QString info_installed = runCmd("LC_ALL=en_US.UTF-8 apt-cache policy " + apps + "|grep Candidate -B2").str; // intalled app info
     app_info_list = info_installed.split("--"); // list of installed apps
     // create a hash of name and installed version
@@ -185,6 +188,7 @@ void MainWindow::displayMXlist(QStringList mxlist)
         }
         ++it;
     }
+    stopProgress();
 }
 
 // process keystrokes
@@ -232,9 +236,8 @@ void MainWindow::findPackage()
     }
 }
 
-void MainWindow::startProgressBar()
+void MainWindow::startProgressDialog()
 {
-    progress = new QProgressDialog(this);
     QProgressBar *bar = new QProgressBar(progress);
     progress->setWindowModality(Qt::WindowModal);
     progress->setWindowFlags(Qt::Dialog | Qt::CustomizeWindowHint | Qt::WindowTitleHint |Qt::WindowSystemMenuHint | Qt::WindowStaysOnTopHint);
@@ -250,18 +253,34 @@ void MainWindow::startProgressBar()
     connect(timer, SIGNAL(timeout()),SLOT(procTime()));
 }
 
-void MainWindow::stopProgressBar()
+void MainWindow::startProgressBar()
+{
+    ui->progressBar->setValue(0);
+    ui->progressBar->setTextVisible(false);
+    ui->progressBar->setVisible(true);
+    ui->progressBar->setTextVisible(true);
+    qApp->processEvents();
+    timer = new QTimer(this);
+    timer->start(20);
+    connect(timer, SIGNAL(timeout()),SLOT(procTime()));
+}
+
+void MainWindow::stopProgress()
 {
     timer->stop();
     disconnect(timer, SIGNAL(timeout()), 0, 0);
     progress->close();
+    ui->progressBar->hide();
 }
 
 void MainWindow::procTime()
 {
     progress->setValue(progress->value() + 1);
+    if (ui->progressBar->value() < 100)
+        ui->progressBar->setValue(ui->progressBar->value() + 1);
+    else
+        ui->progressBar->setValue(0);
 }
-
 
 void MainWindow::on_buttonCancel_clicked()
 {

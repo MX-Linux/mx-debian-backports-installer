@@ -54,10 +54,12 @@ public:
     QStringList changeset;
     QStringList readMXlist();
 
-    void displayMXlist(QStringList mxlist);    
+    void displayMXlist(QStringList mxlist);
     void start();
     void startProgressBar();
-    void stopProgressBar();
+    void startProgressDialog();
+    void stopProgress();
+
     QString getVersion(QString name);
     Output runCmd(QString cmd);
 
@@ -72,7 +74,7 @@ private slots:
     void on_treeWidget_itemClicked(QTreeWidgetItem *item);
     void on_buttonHelp_clicked();
 
-private:            
+private:
     QProgressDialog *progress;
     QTimer *timer;
     QLineEdit *searchBox;
