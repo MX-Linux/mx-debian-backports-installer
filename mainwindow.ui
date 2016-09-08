@@ -61,7 +61,7 @@
        </property>
       </widget>
      </item>
-     <item row="3" column="1" colspan="4">
+     <item row="3" column="1" colspan="5">
       <widget class="QTreeWidget" name="treeWidget">
        <column>
         <property name="text">
@@ -103,19 +103,6 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="4">
-      <widget class="QProgressBar" name="progressBar">
-       <property name="value">
-        <number>0</number>
-       </property>
-       <property name="textVisible">
-        <bool>true</bool>
-       </property>
-       <property name="format">
-        <string>Loading package info</string>
-       </property>
-      </widget>
-     </item>
      <item row="1" column="2">
       <widget class="QLabel" name="label">
        <property name="text">
@@ -129,7 +116,7 @@
        </property>
       </widget>
      </item>
-     <item row="4" column="0" colspan="5">
+     <item row="4" column="0" colspan="6">
       <layout class="QGridLayout" name="buttonBar" columnstretch="0,0,0,0,0,0,0,0">
        <property name="sizeConstraint">
         <enum>QLayout::SetDefaultConstraint</enum>
@@ -309,6 +296,19 @@
         </size>
        </property>
       </spacer>
+     </item>
+     <item row="2" column="4">
+      <widget class="QLineEdit" name="searchBox">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>search</string>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
