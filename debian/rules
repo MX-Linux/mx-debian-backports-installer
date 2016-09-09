@@ -1,24 +1,24 @@
 #!/usr/bin/make -f
 
-QMAKE_OPTS = DEFINES+=NO_DEBUG_ON_CONSOLE
-MAKE_OPTS  = QMAKE=qmake-qt5 LRELEASE=lrelease-qt5 QMAKE_OPTS="$(QMAKE_OPTS)"
+# add hardening
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/buildflags.mk
+
+export QT_SELECT=5
+
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 
 override_dh_auto_clean:
 	dh_auto_clean
-	rm -f src/translations/*.qm
+	rm -f translations/*.qm
 
 override_dh_auto_build:
-	lrelease mx-test-repo-installer.pro
-	dh_auto_build -- $(MAKE_OPTS)
-
-override_dh_auto_install:
-	dh_auto_install -- $(MAKE_OPTS)
+	/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/bin/lrelease mx-debian-backports-installer.pro
+	dh_auto_build
 
 override_dh_builddeb:
 	dh_builddeb -- -Z xz
-
-override_dh_shlibdeps:
-	dh_shlibdeps --dpkg-shlibdeps-params=--ignore-missing-info
 
 override_dh_usrlocal:
 
