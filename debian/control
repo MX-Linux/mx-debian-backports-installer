@@ -2,8 +2,10 @@ Source: mx-debian-backports-installer
 Section: admin
 Priority: optional
 Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
-Build-Depends: qt5-qmake,
-	debhelper (>=7.0.50~)
+Build-Depends: debhelper (>=7.0.50~),
+               dpkg-dev (>= 1.16.1.1),
+               qtbase5-dev,
+               qttools5-dev-tools
 Standards-Version: 3.9.5
 Vcs-Git: https://github.com/mx-linux/mx-debian-backports-installer
 
