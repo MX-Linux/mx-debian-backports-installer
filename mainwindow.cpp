@@ -43,12 +43,14 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     this->show();
-    version = getVersion("mx-debian-backports-installer");
+    version = getVersion("mx-test-repo-installer");
     qApp->processEvents();
-    searchBox = new QLineEdit(this);
     ui->icon->setIcon(QIcon::fromTheme("software-update-available", QIcon("/usr/share/mx-debian-backports-installer/icons/software-update-available.png")));
     this->setWindowIcon(QIcon::fromTheme("application-x-deb", QIcon("/usr/share/mx-debian-backports-installer/icons/application-x-deb.png")));
+    startProgressBar();
     runCmd("backports-list-builder.sh");
+    connect(ui->searchBox,SIGNAL(textChanged(QString)),this, SLOT(findPackage()));
+    ui->searchBox->setFocus();
     start();
 }
 
@@ -113,7 +115,6 @@ void MainWindow::displayMXlist(QStringList mxlist)
     QTreeWidgetItem *widget_item;
 
     //system("notify-send -i application-x-deb 'Test Repo Installer' 'List Packages'");
-    //startProgressBar();
     ui->treeWidget->clear();
 
     // create a list of apps, create a hash with app_name, app_info
@@ -136,6 +137,7 @@ void MainWindow::displayMXlist(QStringList mxlist)
     for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
         ui->treeWidget->resizeColumnToContents(i);
     }
+    stopProgressBar();
     QString info_installed = runCmd("LC_ALL=en_US.UTF-8 apt-cache policy " + apps + "|grep Candidate -B2").str; // intalled app info
     app_info_list = info_installed.split("--"); // list of installed apps
     // create a hash of name and installed version
@@ -163,28 +165,27 @@ void MainWindow::displayMXlist(QStringList mxlist)
         VersionNumber candidatetest = QString(app_ver);
         if (installed.toString() == "(none)") {
             for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
-                widget_item->setToolTip(i, "Version " + candidate.toString() + " in stable repo" );
+                widget_item->setToolTip(i, tr("Version ") + candidate.toString() + tr(" in stable repo"));
             }
         } else if (installed.toString() == "") {
             for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
-                widget_item->setToolTip(i, "Not available in stable repo" );
+                widget_item->setToolTip(i, tr("Not available in stable repo"));
             }
         } else {
             if (installed >= candidatetest) {
                 for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
                     widget_item->setDisabled(true);
-                    widget_item->setToolTip(i, "Latest version " + installed.toString() + " already installed");
+                    widget_item->setToolTip(i, tr("Latest version ") + installed.toString() + tr(" already installed"));
                 }
             } else {
                 widget_item->setIcon(1, QIcon::fromTheme("software-update-available", QIcon("/usr/share/mx-debian-backports-installer/icons/software-update-available.png")));
                 for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
-                    widget_item->setToolTip(i, "Version " + installed.toString() + " installed");
+                    widget_item->setToolTip(i, tr("Version ") + installed.toString() + tr(" installed"));
                 }
             }
         }
         ++it;
     }
-    //stopProgressBar();
 }
 
 // process keystrokes
@@ -198,7 +199,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
 
 void MainWindow::closeSearch()
 {
-    searchBox->close();
+    ui->searchBox->clear();
     QTreeWidgetItemIterator it(ui->treeWidget);
     while (*it) {
         (*it)->setHidden(false);
@@ -209,17 +210,13 @@ void MainWindow::closeSearch()
 // search entered text starting with the first keystroke
 void MainWindow::search()
 {
-    searchBox = new QLineEdit(this);
-    searchBox->move(this->geometry().width() - 120,this->geometry().height() - 100);
-    searchBox->setFocus();
-    searchBox->show();
-    connect(searchBox,SIGNAL(textChanged(QString)),this, SLOT(findPackage()));
+    ui->searchBox->setFocus();
 }
 
 // find packages
 void MainWindow::findPackage()
 {
-    QString word = searchBox->text();
+    QString word = ui->searchBox->text();
     QList<QTreeWidgetItem *> found_items = ui->treeWidget->findItems(word, Qt::MatchContains, 2);
     QTreeWidgetItemIterator it(ui->treeWidget);
     while (*it) {
@@ -261,7 +258,6 @@ void MainWindow::procTime()
 {
     progress->setValue(progress->value() + 1);
 }
-
 
 void MainWindow::on_buttonCancel_clicked()
 {
