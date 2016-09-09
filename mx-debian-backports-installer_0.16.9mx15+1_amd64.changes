@@ -1,0 +1,43 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Wed, 07 Sep 2016 16:50:11 -0400
+Source: mx-debian-backports-installer
+Binary: mx-debian-backports-installer
+Architecture: source amd64
+Version: 0.16.9mx15+1
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description:
+ mx-debian-backports-installer - mx-debian-backports-installer
+Changes:
+ mx-debian-backports-installer (0.16.9mx15+1) mx; urgency=medium
+ .
+   * test without progress bar*
+Checksums-Sha1:
+ f7250fcb7661546f49ea921b0e921fdb3bf415f6 1289 mx-debian-backports-installer_0.16.9mx15+1.dsc
+ 4ab6529cff179c8a7da9c5c7bef4b02fe343f18f 19636 mx-debian-backports-installer_0.16.9mx15+1.tar.xz
+ 9f5504e9576a023ccb7386053ca399897f73b54f 41430 mx-debian-backports-installer_0.16.9mx15+1_amd64.deb
+Checksums-Sha256:
+ 0e135d71dbd88144eed937277932bdbe592f7fefc7e76e2adfc9dd69cd434c0a 1289 mx-debian-backports-installer_0.16.9mx15+1.dsc
+ 82eb0136b93bb620eaa89af0b202f775255a813fb5d9bf471976e3c4192d69e4 19636 mx-debian-backports-installer_0.16.9mx15+1.tar.xz
+ 724a24018234db09380734afd9c69552982be80bdfd73c36b9bcb5bdf2068d63 41430 mx-debian-backports-installer_0.16.9mx15+1_amd64.deb
+Files:
+ 2ca42f37a39e2ec282ba6ab54ef5e4ac 1289 admin optional mx-debian-backports-installer_0.16.9mx15+1.dsc
+ 2fbb8fc95fcbe33dfe4a72ce6c2d3e6a 19636 admin optional mx-debian-backports-installer_0.16.9mx15+1.tar.xz
+ 18a1e6c4a7ae6f86fb4e4f666a8cf6a6 41430 admin optional mx-debian-backports-installer_0.16.9mx15+1_amd64.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJX0XufAAoJEHCTjHgGee6YOc8H/2s1Qw7cYtyMe8HRkSLKd3rm
+d0BllfTYyPe2wG0ruC6zM8hw3cRxDO35xCjwgLg38yx82azfUkwAq80Op1JBdFfE
+g/tD1ItuuQ5WmrS4QNSkEdmDuXZaQ8Kg52a0ITk6zMYclf4NNLFFirzegT0XSdot
+WoawcXa6a3kWSTzB3ugcfNYDLQnuDxKdY9fiGKD+bR0A8GfcA9UzHrr+7IplIxet
+ac28O3ygfpSqkBM99cVaB2FB3V6oflorUQC2Ip9XhMRWoUA3nHwzm0EMSb59lBlQ
+LZpo2DwAAl64FbsObRMzF+RHq2m8C3NZfDhw6OF+OswXdvX26hyWXusBGGq6KVw=
+=zT3P
+-----END PGP SIGNATURE-----
