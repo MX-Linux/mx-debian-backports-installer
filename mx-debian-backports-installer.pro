@@ -4,6 +4,11 @@
 #
 #-------------------------------------------------
 
+QMAKE_CPPFLAGS *= $(shell dpkg-buildflags --get CPPFLAGS)
+QMAKE_CFLAGS   *= $(shell dpkg-buildflags --get CFLAGS)
+QMAKE_CXXFLAGS *= $(shell dpkg-buildflags --get CXXFLAGS)
+QMAKE_LFLAGS   *= $(shell dpkg-buildflags --get LDFLAGS)
+
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets

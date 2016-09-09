@@ -1,0 +1,22 @@
+Format: 1.8
+Date: Wed, 07 Sep 2016 16:50:11 -0400
+Source: mx-debian-backports-installer
+Binary: mx-debian-backports-installer
+Architecture: i386
+Version: 0.16.9mx15
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description:
+ mx-debian-backports-installer - mx-debian-backports-installer
+Changes:
+ mx-debian-backports-installer (0.16.9mx15) mx; urgency=medium
+ .
+   * test without progress bar*
+Checksums-Sha1:
+ 25842204a98cc8cac64df1d83e82feca98aaf9e9 42934 mx-debian-backports-installer_0.16.9mx15_i386.deb
+Checksums-Sha256:
+ a9d48b3ddb878ee6a142e20a7a533c1e218582bc92bd855140318c4a6f5fa4b8 42934 mx-debian-backports-installer_0.16.9mx15_i386.deb
+Files:
+ a94f0a7ee8159454a1339869b3e1aa40 42934 admin optional mx-debian-backports-installer_0.16.9mx15_i386.deb
