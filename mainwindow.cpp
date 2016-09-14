@@ -51,6 +51,7 @@ MainWindow::MainWindow(QWidget *parent) :
     runCmd("backports-list-builder.sh");
     connect(ui->searchBox,SIGNAL(textChanged(QString)),this, SLOT(findPackage()));
     ui->searchBox->setFocus();
+    lock_file = new LockFile("/var/lib/dpkg/lock");
     start();
 }
 
@@ -275,10 +276,12 @@ void MainWindow::on_buttonInstall_clicked()
         qDebug() << aptgetlist;
     }
     runCmd("echo deb http://ftp.debian.org/debian jessie-backports main contrib non-free>/etc/apt/sources.list.d/mxdebianbackporttemp.list");
+    lock_file->unlock();
     runCmd("x-terminal-emulator -e apt-get update");
     runCmd("x-terminal-emulator -e apt-get -t jessie-backports install " + aptgetlist);
     runCmd("rm -f /etc/apt/sources.list.d/mxdebianbackporttemp.list");
     runCmd("x-terminal-emulator -e apt-get update");
+    lock_file->lock();
     changeset.clear();
     //qDebug() << changeset;
     closeSearch();

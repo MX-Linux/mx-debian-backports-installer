@@ -1,0 +1,43 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Wed, 14 Sep 2016 12:32:08 -0400
+Source: mx-debian-backports-installer
+Binary: mx-debian-backports-installer
+Architecture: source amd64
+Version: 0.16.9mx15+2
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description:
+ mx-debian-backports-installer - mx-debian-backports-installer
+Changes:
+ mx-debian-backports-installer (0.16.9mx15+2) mx; urgency=medium
+ .
+   * added dpkg locking
+Checksums-Sha1:
+ 502db1b1d456159fe9934e43ec8d623714b47697 1335 mx-debian-backports-installer_0.16.9mx15+2.dsc
+ 658aa18f1dbaff5051922326810a54b1f8cadab5 20372 mx-debian-backports-installer_0.16.9mx15+2.tar.xz
+ 4a86d73f236878678a44358375ef271006cc9d83 42364 mx-debian-backports-installer_0.16.9mx15+2_amd64.deb
+Checksums-Sha256:
+ 35a863506095319de9d218435078dd42700d1f44c98e5af1e7cbe3f716de561c 1335 mx-debian-backports-installer_0.16.9mx15+2.dsc
+ 8de46b5beef1e89792fdee0a76eb494eca7c7890be9ae7a45d7c435546c50a38 20372 mx-debian-backports-installer_0.16.9mx15+2.tar.xz
+ bd5584bb137124f175e17e362ac520ae59123ac1cab7f639d7f094d7adb4c01f 42364 mx-debian-backports-installer_0.16.9mx15+2_amd64.deb
+Files:
+ 805efbbd7b2e7c8898ef0faec70b6f2d 1335 admin optional mx-debian-backports-installer_0.16.9mx15+2.dsc
+ f40c166e0beaca0cf9f6680f92b2b3a9 20372 admin optional mx-debian-backports-installer_0.16.9mx15+2.tar.xz
+ 1b8a0f9f997e419c60e6d09ecbfe5a9b 42364 admin optional mx-debian-backports-installer_0.16.9mx15+2_amd64.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJX2XvFAAoJEHCTjHgGee6YF9AIAI3GZjo0A5C+OSVGaUnbE699
+UGkNW80QiUPBZk3cN2ZFAty+h/e7ve2J8F1hSkICGeyjuFOXg4/H/+1Fo/KPXZGN
+2WFgYSZUp3gkl6dWXv2QD8IOe8C1xnhgyWw3qg6TGOjB/ZeiISVM5n4myaKuoMcg
+J4IqR8uXCR5G7PdlGbCKAteuIKl4Ucb65uoruP+9U2qEHLJf79Xp6G/1O6U55nZQ
+h4tYRJWdj8pEljz+y9UTDVugwCsDVso/kaqFfg+ba5UJbpY+AUKlsJccrPYSzapC
+bkTESxnxfDbpQL4aECuI+FUERUTJpjVrcvFOU5vvmg2OFeNf7tUfkyiyoPQDvq4=
+=+wLc
+-----END PGP SIGNATURE-----

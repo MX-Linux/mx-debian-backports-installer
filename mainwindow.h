@@ -26,6 +26,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <lockfile.h>
+
 #include <QTreeWidgetItem>
 #include <QTimer>
 #include <QProgressDialog>
@@ -74,6 +76,7 @@ private slots:
     void on_buttonHelp_clicked();
 
 private:
+    LockFile *lock_file;
     QProgressDialog *progress;
     QTimer *timer;
     Ui::MainWindow *ui;

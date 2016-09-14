@@ -1,0 +1,37 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Wed, 14 Sep 2016 12:32:08 -0400
+Source: mx-debian-backports-installer
+Binary: mx-debian-backports-installer
+Architecture: i386
+Version: 0.16.9mx15+2
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description:
+ mx-debian-backports-installer - mx-debian-backports-installer
+Changes:
+ mx-debian-backports-installer (0.16.9mx15+2) mx; urgency=medium
+ .
+   * added dpkg locking
+Checksums-Sha1:
+ 963cd88a2c9da9a6eb75ee38a5c079347d0f9484 43780 mx-debian-backports-installer_0.16.9mx15+2_i386.deb
+Checksums-Sha256:
+ 51717bad0bfdea9532099394cac91cd9fa116940899b32697b5eeb6ba0502f26 43780 mx-debian-backports-installer_0.16.9mx15+2_i386.deb
+Files:
+ e814317a0188b1992eb5db4b4dd9fe94 43780 admin optional mx-debian-backports-installer_0.16.9mx15+2_i386.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJX2XyPAAoJEHCTjHgGee6Y2msIAMoy4HEIg6kUs+ZQdipmTK1e
+5xUU8HVzWx2nFf9QFwcEmgedvY5aYOJtCXeeia3aGVNYtNyGUF5zFIBlSGYypGue
+tHlDLIY8pwgVaNWKbwp+0CclxxuXmIp8bNcK3pvkPhgNHMqOdYRDgr2YBqzpDcFp
+idV1rKafAWaZ64wsc7XUMObllc/lUcSW1FxIiJzGT/zSZT7k5DGHy1koeFzw7fKx
+lAlVCJ2HTDhMxL7YBaoGW8nADA6SbhuLwQRgKVVCgwO8c/AC93wxCiUQX7K5QiHx
+kTuBmh+SntknCv2y9Akm5bqJHiZOxbgYnKw0U6/t7c0WZCaT4dSpmYSyZ6t6DYs=
+=l8i1
+-----END PGP SIGNATURE-----
