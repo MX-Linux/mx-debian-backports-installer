@@ -33,6 +33,7 @@
 #include <QMessageBox>
 #include <QHash>
 #include <QKeyEvent>
+#include <QCheckBox>
 
 #include <QDebug>
 
@@ -41,6 +42,12 @@ MainWindow::MainWindow(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::MainWindow)
 {
+    QFileInfo checkfile("/etc/mx-dbi-checkfile");
+    if (checkfile.exists()) {
+        qDebug() << "Found Config File";
+    } else {
+        displayWarning();
+    }
     ui->setupUi(this);
     this->show();
     version = getVersion("mx-test-repo-installer");
@@ -96,6 +103,30 @@ QStringList MainWindow::readMXlist()
     mxlist = file_content.split("\n");
     mxlist.sort();
     return mxlist;
+}
+
+void MainWindow::disableWarning(bool checked)
+{
+    if (checked) {
+        system("touch /etc/mx-dbi-checkfile");
+    }
+}
+
+void MainWindow::displayWarning()
+{
+    QMessageBox msgBox(QMessageBox::NoIcon,
+                       tr("Warning"),
+                       tr("You are about to use Debian Backports, which contains packages taken from the next "\
+                          "Debian release (called 'testing'), adjusted and recompiled for usage on Debian stable."\
+                          "They cannot be tested as extensively as in the stable releases of Debian and MX Linux,"\
+                          "and are provided on an as-is basis, with risk of incompatibilities with other components"\
+                          "in Debian stable. Use with care!"), 0, 0);
+    msgBox.addButton("Close", QMessageBox::RejectRole); // because we want to display the buttons in reverse order we use counter-intuitive roles.
+    QCheckBox *cb = new QCheckBox();
+    msgBox.setCheckBox(cb);
+    cb->setText(tr("Do not show this message again"));
+    connect(cb, SIGNAL(clicked(bool)), SLOT(disableWarning(bool)));
+    msgBox.exec();
 }
 
 // Dislpay available apps
