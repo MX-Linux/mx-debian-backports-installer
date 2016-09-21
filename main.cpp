@@ -57,19 +57,14 @@ int main(int argc, char *argv[])
     } else {
         lock_file.lock();
     }
-
     if (getuid() == 0) {
         MainWindow w;
         w.show();
-
         return a.exec();
-        lock_file.unlock();
-
     } else {
         QApplication::beep();
         QMessageBox::critical(0, QString::null,
                               QApplication::tr("You must run this program as root."));
         return 1;
     }
-
 }
