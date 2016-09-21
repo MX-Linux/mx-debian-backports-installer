@@ -42,7 +42,8 @@ MainWindow::MainWindow(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::MainWindow)
 {
-    QFileInfo checkfile("/etc/mx-dbi-checkfile");
+    QDir dir;
+    QFileInfo checkfile(dir.homePath() + "/.mx-dbi-checkfile");
     if (checkfile.exists()) {
         qDebug() << "Found Config File";
     } else {
@@ -108,7 +109,8 @@ QStringList MainWindow::readMXlist()
 void MainWindow::disableWarning(bool checked)
 {
     if (checked) {
-        system("touch /etc/mx-dbi-checkfile");
+        QDir dir;
+        system("touch " + dir.homePath().toUtf8() + "/.mx-dbi-checkfile");
     }
 }
 
@@ -125,7 +127,7 @@ void MainWindow::displayWarning()
     QCheckBox *cb = new QCheckBox();
     msgBox.setCheckBox(cb);
     cb->setText(tr("Do not show this message again"));
-    connect(cb, SIGNAL(clicked(bool)), SLOT(disableWarning(bool)));
+    connect(cb, SIGNAL(clicked(bool)), this, SLOT(disableWarning(bool)));
     msgBox.exec();
 }
 
@@ -342,7 +344,7 @@ void MainWindow::on_buttonAbout_clicked()
                        tr("About MX Debian Backports Installer"), "<p align=\"center\"><b><h2>" +
                        tr("MX Debian Backports Installer") + "</h2></b></p><p align=\"center\">" + tr("Version: ") + version + "</p><p align=\"center\"><h3>" +
                        tr("App for installing directly from Debian Backports Repo") +
-                       "</h3></p><p align=\"center\"><a href=\"http://www.mepiscommunity.org/mx\">http://www.mepiscommunity.org/mx</a><br /></p><p align=\"center\">" +
+                       "</h3></p><p align=\"center\"><a href=\"http://mxlinux.org/\">http://mxlinux.org/mx</a><br /></p><p align=\"center\">" +
                        tr("Copyright (c) MX Linux") + "<br /><br /></p>", 0, this);
     msgBox.addButton(tr("Cancel"), QMessageBox::AcceptRole); // because we want to display the buttons in reverse order we use counter-intuitive roles.
     msgBox.addButton(tr("License"), QMessageBox::RejectRole);
