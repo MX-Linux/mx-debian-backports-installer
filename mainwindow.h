@@ -34,6 +34,7 @@
 #include <QProgressBar>
 #include <QLineEdit>
 
+
 namespace Ui {
 class MainWindow;
 }
@@ -57,6 +58,7 @@ public:
     QStringList readMXlist();
 
     void displayMXlist(QStringList mxlist);
+    void displayWarning();
     void start();
     void startProgressBar();
     void stopProgressBar();
@@ -66,6 +68,7 @@ public:
 
 private slots:
     void closeSearch();
+    void disableWarning(bool checked);
     void search();
     void findPackage();
     void procTime();

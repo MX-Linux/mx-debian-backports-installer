@@ -33,6 +33,7 @@
 #include <QMessageBox>
 #include <QHash>
 #include <QKeyEvent>
+#include <QCheckBox>
 
 #include <QDebug>
 
@@ -41,6 +42,13 @@ MainWindow::MainWindow(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::MainWindow)
 {
+    QDir dir;
+    QFileInfo checkfile(dir.homePath() + "/.mx-dbi-checkfile");
+    if (checkfile.exists()) {
+        qDebug() << "Found Config File";
+    } else {
+        displayWarning();
+    }
     ui->setupUi(this);
     this->show();
     version = getVersion("mx-test-repo-installer");
@@ -96,6 +104,31 @@ QStringList MainWindow::readMXlist()
     mxlist = file_content.split("\n");
     mxlist.sort();
     return mxlist;
+}
+
+void MainWindow::disableWarning(bool checked)
+{
+    if (checked) {
+        QDir dir;
+        system("touch " + dir.homePath().toUtf8() + "/.mx-dbi-checkfile");
+    }
+}
+
+void MainWindow::displayWarning()
+{
+    QMessageBox msgBox(QMessageBox::NoIcon,
+                       tr("Warning"),
+                       tr("You are about to use Debian Backports, which contains packages taken from the next "\
+                          "Debian release (called 'testing'), adjusted and recompiled for usage on Debian stable."\
+                          "They cannot be tested as extensively as in the stable releases of Debian and MX Linux,"\
+                          "and are provided on an as-is basis, with risk of incompatibilities with other components"\
+                          "in Debian stable. Use with care!"), 0, 0);
+    msgBox.addButton("Close", QMessageBox::RejectRole); // because we want to display the buttons in reverse order we use counter-intuitive roles.
+    QCheckBox *cb = new QCheckBox();
+    msgBox.setCheckBox(cb);
+    cb->setText(tr("Do not show this message again"));
+    connect(cb, SIGNAL(clicked(bool)), this, SLOT(disableWarning(bool)));
+    msgBox.exec();
 }
 
 // Dislpay available apps
@@ -311,7 +344,7 @@ void MainWindow::on_buttonAbout_clicked()
                        tr("About MX Debian Backports Installer"), "<p align=\"center\"><b><h2>" +
                        tr("MX Debian Backports Installer") + "</h2></b></p><p align=\"center\">" + tr("Version: ") + version + "</p><p align=\"center\"><h3>" +
                        tr("App for installing directly from Debian Backports Repo") +
-                       "</h3></p><p align=\"center\"><a href=\"http://www.mepiscommunity.org/mx\">http://www.mepiscommunity.org/mx</a><br /></p><p align=\"center\">" +
+                       "</h3></p><p align=\"center\"><a href=\"http://mxlinux.org/\">http://mxlinux.org/mx</a><br /></p><p align=\"center\">" +
                        tr("Copyright (c) MX Linux") + "<br /><br /></p>", 0, this);
     msgBox.addButton(tr("Cancel"), QMessageBox::AcceptRole); // because we want to display the buttons in reverse order we use counter-intuitive roles.
     msgBox.addButton(tr("License"), QMessageBox::RejectRole);
