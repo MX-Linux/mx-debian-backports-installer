@@ -120,7 +120,7 @@ void MainWindow::displayWarning()
                           "They cannot be tested as extensively as in the stable releases of Debian and MX Linux, "\
                           "and are provided on an as-is basis, with risk of incompatibilities with other components "\
                           "in Debian stable. Use with care!"), 0, 0);
-    msgBox.addButton("Close", QMessageBox::RejectRole); // because we want to display the buttons in reverse order we use counter-intuitive roles.
+    msgBox.addButton(tr("Close"), QMessageBox::RejectRole); // because we want to display the buttons in reverse order we use counter-intuitive roles.
     QCheckBox *cb = new QCheckBox();
     msgBox.setCheckBox(cb);
     cb->setText(tr("Do not show this message again"));

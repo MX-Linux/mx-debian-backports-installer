@@ -48,6 +48,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="232"/>
+        <location filename="../mainwindow.cpp" line="123"/>
         <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
