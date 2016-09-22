@@ -1,3 +1,9 @@
+mx-debian-backports-installer (0.16.9mx15+3) mx; urgency=medium
+
+  * added warning
+
+ -- Adrian <adrian@mxlinux.org>  Thu, 22 Sep 2016 09:48:39 -0400
+
 mx-debian-backports-installer (0.16.9mx15+2) mx; urgency=medium
 
   * added dpkg locking
