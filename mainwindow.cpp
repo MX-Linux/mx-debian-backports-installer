@@ -113,7 +113,7 @@ void MainWindow::disableWarning(bool checked)
 
 void MainWindow::displayWarning()
 {
-    QMessageBox msgBox(QMessageBox::NoIcon,
+    QMessageBox msgBox(QMessageBox::Warning,
                        tr("Warning"),
                        tr("You are about to use Debian Backports, which contains packages taken from the next "\
                           "Debian release (called 'testing'), adjusted and recompiled for usage on Debian stable. "\
@@ -121,8 +121,6 @@ void MainWindow::displayWarning()
                           "and are provided on an as-is basis, with risk of incompatibilities with other components "\
                           "in Debian stable. Use with care!"), 0, 0);
     msgBox.addButton(QMessageBox::Close);
-
-                //tr("Close"), QMessageBox::RejectRole); // because we want to display the buttons in reverse order we use counter-intuitive roles.
     QCheckBox *cb = new QCheckBox();
     msgBox.setCheckBox(cb);
     cb->setText(tr("Do not show this message again"));
