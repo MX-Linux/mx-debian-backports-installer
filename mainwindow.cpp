@@ -37,16 +37,13 @@
 
 #include <QDebug>
 
-
 MainWindow::MainWindow(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::MainWindow)
 {
     QDir dir;
-    QFileInfo checkfile(dir.homePath() + "/.mx-dbi-checkfile");
-    if (checkfile.exists()) {
-        qDebug() << "Found Config File";
-    } else {
+    QFileInfo checkfile(dir.homePath() + "/.config/mx-debian-backports-installer");
+    if (!checkfile.exists()) {
         displayWarning();
     }
     ui->setupUi(this);
@@ -110,7 +107,7 @@ void MainWindow::disableWarning(bool checked)
 {
     if (checked) {
         QDir dir;
-        system("touch " + dir.homePath().toUtf8() + "/.mx-dbi-checkfile");
+        system("touch " + dir.homePath().toUtf8() + "/.config/mx-debian-backports-installer");
     }
 }
 
@@ -119,9 +116,9 @@ void MainWindow::displayWarning()
     QMessageBox msgBox(QMessageBox::NoIcon,
                        tr("Warning"),
                        tr("You are about to use Debian Backports, which contains packages taken from the next "\
-                          "Debian release (called 'testing'), adjusted and recompiled for usage on Debian stable."\
-                          "They cannot be tested as extensively as in the stable releases of Debian and MX Linux,"\
-                          "and are provided on an as-is basis, with risk of incompatibilities with other components"\
+                          "Debian release (called 'testing'), adjusted and recompiled for usage on Debian stable. "\
+                          "They cannot be tested as extensively as in the stable releases of Debian and MX Linux, "\
+                          "and are provided on an as-is basis, with risk of incompatibilities with other components "\
                           "in Debian stable. Use with care!"), 0, 0);
     msgBox.addButton("Close", QMessageBox::RejectRole); // because we want to display the buttons in reverse order we use counter-intuitive roles.
     QCheckBox *cb = new QCheckBox();
