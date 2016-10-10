@@ -1,3 +1,9 @@
+mx-debian-backports-installer (16.10mx16) mx; urgency=medium
+
+  * changed URLs
+
+ -- Adrian <adrian@mxlinux.org>  Mon, 10 Oct 2016 13:14:05 -0400
+
 mx-debian-backports-installer (0.16.9mx15+3) mx; urgency=medium
 
   * added warning

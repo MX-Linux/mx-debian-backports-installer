@@ -5,7 +5,7 @@
  *
  * Authors: Adrian
  *          dolphin_oracle
- *          MX & MEPIS Community <http://forum.mepiscommunity.org>
+ *          MX Linux <http://mxlinux.org>
  *
  * This file is part of mx-debian-backports-installer
  *
