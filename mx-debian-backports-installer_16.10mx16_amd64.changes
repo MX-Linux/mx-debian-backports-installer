@@ -18,26 +18,26 @@ Changes:
  .
    * changed URLs
 Checksums-Sha1:
- e596768a3c1aec9c9311240addc3b6ffebc78e09 1323 mx-debian-backports-installer_16.10mx16.dsc
- 960276a891d35435687fe1df9cbb1048a2f08f8c 27616 mx-debian-backports-installer_16.10mx16.tar.xz
- c14b50430ef99c8fee0e415666df84e1ed029f2b 58728 mx-debian-backports-installer_16.10mx16_amd64.deb
+ 53d6836fd9a0788018c5d73a6810243c9e550170 1323 mx-debian-backports-installer_16.10mx16.dsc
+ c3165cd8cb809475684d7aac45991846ad4686b9 27652 mx-debian-backports-installer_16.10mx16.tar.xz
+ 0491ba3d5ad9a54d5fbafb4451e54aba6c340e4d 58740 mx-debian-backports-installer_16.10mx16_amd64.deb
 Checksums-Sha256:
- f7ae3cd6a405a848094e92e8c2450523c417eb5876dd96e12442b56de2a6581e 1323 mx-debian-backports-installer_16.10mx16.dsc
- 67cac808e244ac04ab38e327b98ea47e9cd99ea4eba2bb473b3995b1d60897ff 27616 mx-debian-backports-installer_16.10mx16.tar.xz
- 9e93faab641c0815a5e0c27cf5852060a0b82cb45dccd210a9e3711e21412009 58728 mx-debian-backports-installer_16.10mx16_amd64.deb
+ 69e9b23203dda58030d9d01f3377e9a7c2308c40a87fb7e7e1bd945d1423b837 1323 mx-debian-backports-installer_16.10mx16.dsc
+ ea1d54de811cd9181c006a52ed44689ed2130e39498b3cb1552b9cd3a5750579 27652 mx-debian-backports-installer_16.10mx16.tar.xz
+ b6d1bc4bd897403d48d2c1dbc023bc03bd561548bc0577a9201f633905e9f19d 58740 mx-debian-backports-installer_16.10mx16_amd64.deb
 Files:
- d89053aab44ccf97f14f6754ed7bcc78 1323 admin optional mx-debian-backports-installer_16.10mx16.dsc
- 4ee7f6bcca7fea2b7bec1721ff54d140 27616 admin optional mx-debian-backports-installer_16.10mx16.tar.xz
- 4643ae9437c998ccda48ab8cf2181527 58728 admin optional mx-debian-backports-installer_16.10mx16_amd64.deb
+ 15bfc0ca6161d8860c48eda3c881b07d 1323 admin optional mx-debian-backports-installer_16.10mx16.dsc
+ 9fddda15374b72e838cb762b237ee7c3 27652 admin optional mx-debian-backports-installer_16.10mx16.tar.xz
+ 0f25b5753c8e3c8904b1971b02698c23 58740 admin optional mx-debian-backports-installer_16.10mx16_amd64.deb
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iQEcBAEBAgAGBQJX+8yHAAoJEHCTjHgGee6Y+OkH/1CKfulhHIIcgR9CvKh3sqs2
-Z45HjLjV6o1cAQj8PosXiLv8g0G+p7dUorduxevtGIqbPd5vdoqMcXy2istfA8ft
-Waljppe93FSapKV2x8N+obBsZA9qCFHCYPyr3xvlALUrqVncpZEFbMGJrcpHcqPq
-0cTjfcRLK4rTAcQwcetk5qEgIyhMayu7Y9ICoAdehgZ9VbAxaPGvU8t1gtwVbu1V
-p/t7BY63lXV83gfBmoFF5diljShUdqGfHSjYNQEo+enF1Dcn8X22F3IfghZ+xVDd
-kPqiQYi4AIDJJ2mr6dsrkrwFM/Hgd8Azb7qaYEKVgVtsWvsc4cl9sJ24wBAuODI=
-=cuSp
+iQEcBAEBAgAGBQJX++TXAAoJEHCTjHgGee6YH/YH/Ry0nbH9Pzz2c0iMSIGPtI9J
++vXOZoUOA08c5xXBZc0cKOxPu+P6IMngnglZpYygG8v4G44zKzKm/Yd7bGdvpTl0
+ap2h8LSTABzqNOhpPwo2JxYaF3P0UJc4cWte5ywCpolhIAWulraKyj6BXKq7Zepr
+hjjnHMV227AiYbxghxpHHHyQJOKxpquSuqh4UC8bfTwZCmDfpE0DANJs4hVRdes5
+oeaqCJqgsT2Vfo+ybbsEr51ze5Ajk9ewo6QpT8dgLwWWo4XPCiEA3GFuDmQkZcRq
+P2+pzVCPrnD57p85aXqbKwdVPVz7pwkv0NNKLGGsd//n1fbJSTXRTolwKkOwhvk=
+=jnl3
 -----END PGP SIGNATURE-----
