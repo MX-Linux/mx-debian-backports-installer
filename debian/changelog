@@ -1,3 +1,9 @@
+mx-debian-backports-installer (16.10mx16+1) mx; urgency=medium
+
+  * new filters for packagelist builder script.
+
+ -- dolphin_oracle <dolphinoracle@gmail.com>  Tue, 25 Oct 2016 22:15:10 -0400
+
 mx-debian-backports-installer (16.10mx16) mx; urgency=medium
 
   * changed URLs
