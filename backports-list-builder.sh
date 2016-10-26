@@ -40,9 +40,9 @@ declare -a packagename
 declare -a packageversion
 declare -a packagedescrip
 
-packagename=(`cat $DIR/*Packages |grep -v Auto-Built-Package| grep -v Ghc-Package: |grep Package: |cut -d " " -f2`)
-packageversion=(`cat $DIR/*Packages |grep -v Python-Version |grep Version: |cut -d " " -f2`)
-packagedescrip=(`cat $DIR/*Packages |grep Description: |cut -d ":" -f2`)
+packagename=(`cat $DIR/*Packages |awk '/Package:/ && !/-Package/'|cut -d " " -f2`)
+packageversion=(`cat $DIR/*Packages |awk '/Version:/ && !/-Version/'|cut -d " " -f2`)
+packagedescrip=(`cat $DIR/*Packages |awk '/Description:/ && !/-Description/'|cut -d ":" -f2`)
 
 count=$(echo ${#packagename[@]}) 
 countversion=$(echo ${#packageversion[@]}) 

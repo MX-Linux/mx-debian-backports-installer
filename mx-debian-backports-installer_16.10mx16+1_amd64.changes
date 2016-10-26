@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Tue, 25 Oct 2016 22:15:10 -0400
+Source: mx-debian-backports-installer
+Binary: mx-debian-backports-installer
+Architecture: source amd64
+Version: 16.10mx16+1
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: dolphin_oracle <dolphinoracle@gmail.com>
+Description:
+ mx-debian-backports-installer - mx-debian-backports-installer
+Changes:
+ mx-debian-backports-installer (16.10mx16+1) mx; urgency=medium
+ .
+   * new filters for packagelist builder script.
+Checksums-Sha1:
+ 1ad8c56d1a28d07709010ffe712a438404372679 810 mx-debian-backports-installer_16.10mx16+1.dsc
+ f654af33d10f437db2e82cd65f1759d7721ec6a5 27536 mx-debian-backports-installer_16.10mx16+1.tar.xz
+ 5bdbad4e4d8fa72cc0d0823ccb4a989dc8e71677 58706 mx-debian-backports-installer_16.10mx16+1_amd64.deb
+Checksums-Sha256:
+ dc5dd38ba0da188a50956f61bb7474597d1f29ab98d158d5cd1aa7883cf089c8 810 mx-debian-backports-installer_16.10mx16+1.dsc
+ bdfa72e2d5a6e64d584932111db1cf070e3dffc3ebd704a434bc10d61fc976da 27536 mx-debian-backports-installer_16.10mx16+1.tar.xz
+ 001fcecced800c7c5d887c0104a5d43c6bf8c86d75e238d5bd866dd61b647237 58706 mx-debian-backports-installer_16.10mx16+1_amd64.deb
+Files:
+ 8349151e8ce1c9dc9bfded661a640926 810 admin optional mx-debian-backports-installer_16.10mx16+1.dsc
+ d5a9265d487dab623e6eb6e6402d6e25 27536 admin optional mx-debian-backports-installer_16.10mx16+1.tar.xz
+ b59c605f9bc36ba1bd57891c8a3ea3c9 58706 admin optional mx-debian-backports-installer_16.10mx16+1_amd64.deb
