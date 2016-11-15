@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="es">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="es" version="2.1">
 <context>
     <name>MainWindow</name>
     <message>
@@ -99,12 +97,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="118"/>
         <source>You are about to use Debian Backports, which contains packages taken from the next Debian release (called &apos;testing&apos;), adjusted and recompiled for usage on Debian stable. They cannot be tested as extensively as in the stable releases of Debian and MX Linux, and are provided on an as-is basis, with risk of incompatibilities with other components in Debian stable. Use with care!</source>
-        <translation type="unfinished"></translation>
+        <translation>Vas a usar Debian Backports, que contiene paquetes tomados de la próxima versión de Debian (llamada &apos;prueba&apos;), ajustados y recompilados para el uso en Debian stable. Estos no pueden ser probados extensivamente como en las versiones estables de Debian y MX Linux, y se proporcionan &apos;como está&apos;, con el riesgo de incompatibilidades con otros componentes en Debian stable. Utilice con cuidado!</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="126"/>
         <source>Do not show this message again</source>
-        <translation type="unfinished"></translation>
+        <translation>No mostrar este mensaje de nuevo</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="199"/>

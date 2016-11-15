@@ -3,21 +3,29 @@ Version=1.0
 Name=MX Debian Backports Installer
 Name[ca]=MX Debian Backports Installer
 Name[de]=MX Debian-Backports-Installer
+Name[el]=MX Debian Backports Installer
 Name[es]=MX Debian Backports instalador
 Name[fr]=MX Installateur de Debian Backports
 Name[it]=MX Installa da Debian Backports
+Name[ja]=MX Debian Backports インストーラ
 Name[nl]=MX Debian Backports Installeerder
+Name[pt]=MX_Instalador de Atualizações Debian Retroactivas
 Name[ru]=MX Установщик Debian Backports
 Name[sv]=MX Debian Backports Installerare
+Name[tr]=MX Debian Backport yükleyici
 Comment=Install apps directly from Debian Backports Repository
 Comment[ca]=Instal·la aplicacions directament des del dipòsit Debian Backports
 Comment[de]=Apps direkt aus Debian-Backports installieren
+Comment[el]=Εγκατάσταση εφαρμογών απευθείας από Debian Backports Repository
 Comment[es]=Instalar aplicaciones directamente del repositorio Debian Backports
 Comment[fr]=Installer les applications directement du dépôt de Debian Backports
 Comment[it]=Installare applicazioni direttamente dal repository Debian Backports
+Comment[ja]=Debian Backports リポジトリより直接アプリをインストール
 Comment[nl]=Installeer apps rechtstreeks vanuit de Debian-Backports
+Comment[pt]=Instala aplicações a partir do repositório  Debian de Backports
 Comment[ru]=Установка приложений непосредственно из репозитория Debian Backports
 Comment[sv]=Installera program direkt från Debian Backports förråd
+Comment[tr]=Install apps directly from Debian Backports Repository
 Exec=su-to-root -X -c mx-debian-backports-installer
 Icon=application-x-deb
 Path=
@@ -25,3 +33,6 @@ Terminal=false
 StartupNotify=false
 Type=Application
 Categories=System;MX-Software;
+
+
+
