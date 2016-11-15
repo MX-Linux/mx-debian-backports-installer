@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="ja">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="ja" version="2.1">
 <context>
     <name>MainWindow</name>
     <message>
@@ -34,7 +32,7 @@
     <message>
         <location filename="../mainwindow.ui" line="109"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Upgradable package. Newer version available in backports repository.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Upgradable package. backports リポジトリで利用可能な新しいバージョンがあります</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="148"/>
@@ -99,12 +97,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="118"/>
         <source>You are about to use Debian Backports, which contains packages taken from the next Debian release (called &apos;testing&apos;), adjusted and recompiled for usage on Debian stable. They cannot be tested as extensively as in the stable releases of Debian and MX Linux, and are provided on an as-is basis, with risk of incompatibilities with other components in Debian stable. Use with care!</source>
-        <translation type="unfinished"></translation>
+        <translation>Debian バックポート は次期バージョンの Debian（テスト版 testing といわれます）から取られ、Debian 安定版で使用できるように調整したパッケージが含まれています。Debian と MX Linux の安定版リリースにおけるほど多くテストすることができず、Debian 安定版にある他のアプリ互換性がない事へのリスクがある状態で、そのまま提供されています。注意して使用してください！</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="126"/>
         <source>Do not show this message again</source>
-        <translation type="unfinished"></translation>
+        <translation>このメッセージを再度表示しない</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="199"/>
@@ -115,7 +113,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="199"/>
         <source> in stable repo</source>
-        <translation type="unfinished"></translation>
+        <translation>標準リポジトリ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="203"/>
@@ -145,7 +143,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="341"/>
         <source>About MX Debian Backports Installer</source>
-        <translation type="unfinished"></translation>
+        <translation>MX Debian Backports インストーラーについて</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="342"/>
@@ -155,7 +153,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="343"/>
         <source>App for installing directly from Debian Backports Repo</source>
-        <translation type="unfinished"></translation>
+        <translation>Debian Backports リポジトリを直接インストールするアプリ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="345"/>
@@ -179,12 +177,12 @@
     <message>
         <location filename="../main.cpp" line="53"/>
         <source>Unable to get exclusive lock</source>
-        <translation type="unfinished"></translation>
+        <translation>排他ロックを取得できません</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="54"/>
         <source>Another package management application (like Synaptic or apt-get), is already running. Please close that application first</source>
-        <translation type="unfinished"></translation>
+        <translation>別のパッケージ管理アプリケーション (Synaptic や apt-get) がすでに実行されています。まずそのアプリケーションを閉じてください</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="67"/>

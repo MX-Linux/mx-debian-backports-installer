@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="ca">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="ca" version="2.1">
 <context>
     <name>MainWindow</name>
     <message>
@@ -140,7 +138,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="270"/>
         <source>Please wait till the database is loaded.</source>
-        <translation>Si us plau, espereu fins que la bases de dades s&apos;hagi carregat. </translation>
+        <translation>Si us plau, espereu fins que les bases de dades s&apos;hagin carregat. </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="341"/>

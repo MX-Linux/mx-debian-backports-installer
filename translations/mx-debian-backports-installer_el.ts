@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="el">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="el" version="2.1">
 <context>
     <name>MainWindow</name>
     <message>
@@ -9,7 +7,7 @@
         <location filename="../mainwindow.cpp" line="349"/>
         <location filename="../mainwindow.cpp" line="356"/>
         <source>MX Debian Backports Installer</source>
-        <translation type="unfinished"></translation>
+        <translation>Name=MX Debian Backports Installer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="78"/>
@@ -34,7 +32,7 @@
     <message>
         <location filename="../mainwindow.ui" line="109"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Upgradable package. Newer version available in backports repository.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Δυνατότητα αναβάθμισης του πακέτου. Νεότερη έκδοση διαθέσιμη στο αποθετήριο backports.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="148"/>
@@ -89,7 +87,7 @@
     <message>
         <location filename="../mainwindow.ui" line="306"/>
         <source>search</source>
-        <translation type="unfinished"></translation>
+        <translation>aναζήτηση </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="117"/>
@@ -99,43 +97,43 @@
     <message>
         <location filename="../mainwindow.cpp" line="118"/>
         <source>You are about to use Debian Backports, which contains packages taken from the next Debian release (called &apos;testing&apos;), adjusted and recompiled for usage on Debian stable. They cannot be tested as extensively as in the stable releases of Debian and MX Linux, and are provided on an as-is basis, with risk of incompatibilities with other components in Debian stable. Use with care!</source>
-        <translation type="unfinished"></translation>
+        <translation>Είστε έτοιμοι να χρησιμοποιήσετε το Debian backports, το οποίο περιέχει πακέτα που λαμβάνονται από την επόμενη έκδοση του Debian (που ονομάζεται «testing»), με ρυθμίσεις και ανασύνθεσεις για χρήση στο Debian stable. Δεν μπορούν να ελεγχθούν ως εκτενώς και στις σταθερές εκδόσεις του Debian και το MX Linux, και παρέχονται πάνω σε ΩΣ ΕΧΕΙ βάση, με κίνδυνο ασυμβατότητες με άλλα συστατικά στο Debian stable. Χρησιμοποιήστε το με προσοχή!</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="126"/>
         <source>Do not show this message again</source>
-        <translation type="unfinished"></translation>
+        <translation>Να μην εμφανιστεί ξανά αυτό το μήνυμα</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="199"/>
         <location filename="../mainwindow.cpp" line="214"/>
         <source>Version </source>
-        <translation type="unfinished"></translation>
+        <translation>Έκδοση</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="199"/>
         <source> in stable repo</source>
-        <translation type="unfinished"></translation>
+        <translation>σε stable αποθετήριο</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="203"/>
         <source>Not available in stable repo</source>
-        <translation type="unfinished"></translation>
+        <translation>Δεν διατίθεται σε </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="209"/>
         <source>Latest version </source>
-        <translation type="unfinished"></translation>
+        <translation>Τελευταία έκδοση</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="209"/>
         <source> already installed</source>
-        <translation type="unfinished"></translation>
+        <translation>ήδη εγκαταστημένο </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="214"/>
         <source> installed</source>
-        <translation type="unfinished"></translation>
+        <translation>εγκαταστημένο</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="270"/>
@@ -145,7 +143,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="341"/>
         <source>About MX Debian Backports Installer</source>
-        <translation type="unfinished"></translation>
+        <translation>Περί MX Debian Backports Installer</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="342"/>
@@ -155,7 +153,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="343"/>
         <source>App for installing directly from Debian Backports Repo</source>
-        <translation type="unfinished"></translation>
+        <translation>Λογισμικό για την εγκατάσταση απευθείας από Debian Backports Repo</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="345"/>
@@ -179,12 +177,12 @@
     <message>
         <location filename="../main.cpp" line="53"/>
         <source>Unable to get exclusive lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Ανίκανος να πάρει αποκλειστικό κλείδωμα</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="54"/>
         <source>Another package management application (like Synaptic or apt-get), is already running. Please close that application first</source>
-        <translation type="unfinished"></translation>
+        <translation>Μια άλλη εφαρμογή διαχείρισης πακέτων (όπως Synaptic η apt-get), βρίσκεται ήδη σε λειτουργία. Κλείστε πρώτα την εφαρμογή.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="67"/>

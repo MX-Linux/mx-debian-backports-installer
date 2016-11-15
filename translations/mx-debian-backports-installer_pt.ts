@@ -1,4 +1,4 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="ru" version="2.1">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="pt" version="2.1">
 <context>
     <name>MainWindow</name>
     <message>
@@ -7,42 +7,42 @@
         <location filename="../mainwindow.cpp" line="349"/>
         <location filename="../mainwindow.cpp" line="356"/>
         <source>MX Debian Backports Installer</source>
-        <translation>MX Установщик Debian Backports</translation>
+        <translation>MX_Instalador de Atualizações Debian Retroactivas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="78"/>
         <source>Package Name</source>
-        <translation>Имя пакета</translation>
+        <translation>Nome do pacote</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="83"/>
         <source>Version</source>
-        <translation>Версия</translation>
+        <translation>Versão</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="88"/>
         <source>Description</source>
-        <translation>Описание</translation>
+        <translation>Descrição</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="96"/>
         <source>Greyed out items have already been installed.</source>
-        <translation>Выделенные серым цветом пункты уже установлены.</translation>
+        <translation>Os itens sombreados já estão instalados.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="109"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Upgradable package. Newer version available in backports repository.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Пакет может быть обновлен. Более поздняя версия доступна в репозитории Backports.</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Pacote actualizável. Versão mais recente no  repositório de actualizações retroactivas (backports).</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="148"/>
         <source>Display help </source>
-        <translation>Показать справку</translation>
+        <translation>Mostrar a ajuda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="151"/>
         <source>Help</source>
-        <translation>Справка</translation>
+        <translation>Ajuda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="158"/>
@@ -52,12 +52,12 @@
     <message>
         <location filename="../mainwindow.ui" line="203"/>
         <source>About this application</source>
-        <translation>Об этом приложении</translation>
+        <translation>Sobre esta aplicação</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
         <source>About...</source>
-        <translation>O...</translation>
+        <translation>Sobre...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="213"/>
@@ -67,12 +67,12 @@
     <message>
         <location filename="../mainwindow.ui" line="229"/>
         <source>Quit application</source>
-        <translation>Выйти из приложения</translation>
+        <translation>Sair da aplicação</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="232"/>
         <source>Close</source>
-        <translation>Закрыть</translation>
+        <translation>Encerrar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="239"/>
@@ -82,94 +82,94 @@
     <message>
         <location filename="../mainwindow.ui" line="277"/>
         <source>Install</source>
-        <translation>Установить</translation>
+        <translation>Instalar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="306"/>
         <source>search</source>
-        <translation>поиск</translation>
+        <translation>procurar</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="117"/>
         <source>Warning</source>
-        <translation>Предупреждение</translation>
+        <translation>Aviso</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="118"/>
         <source>You are about to use Debian Backports, which contains packages taken from the next Debian release (called &apos;testing&apos;), adjusted and recompiled for usage on Debian stable. They cannot be tested as extensively as in the stable releases of Debian and MX Linux, and are provided on an as-is basis, with risk of incompatibilities with other components in Debian stable. Use with care!</source>
-        <translation>Вы собираетесь использовать Debian Backports, который содержит пакеты, взятые из следующего выпуска Debian (именуемого &quot;testing&quot;), скорректированные и перекомпилированные для использования на Debian stable. Они не могли быть проверены так хорошо, как в стабильных версиях Debian и MX Linux, и предоставляются на основании &quot;как есть&quot;, с риском несовместимости с другими компонентами в Debian stable. Используйте с осторожностью!</translation>
+        <translation>Está prestes a usar o repositório de actualizações retroactivas Debian Backports, que contém pacotes retirados da próxima versão (por enquanto na fase &apos;testing&apos;) do Debian, adaptados e recompilados para uso no na actual versão estável (stable) do Debian. Não é possível testá-los tão extensivamente como nas versões estáveis do Debian e do Linux MX, sendo disponibilizados na base como-estão, com o risco de incompatibilidades com outros componentes do Debian estável (stable). Usar com cuidado!</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="126"/>
         <source>Do not show this message again</source>
-        <translation>Больше не показывать это окно</translation>
+        <translation>Não mostrar esta mensagem novamente</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="199"/>
         <location filename="../mainwindow.cpp" line="214"/>
         <source>Version </source>
-        <translation>Версия</translation>
+        <translation>Versão</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="199"/>
         <source> in stable repo</source>
-        <translation>в стабильном репозитории</translation>
+        <translation>no repositório estável (stable)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="203"/>
         <source>Not available in stable repo</source>
-        <translation>Недоступно в стабильном репозитории</translation>
+        <translation>Não disponível no repositório estável (stable)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="209"/>
         <source>Latest version </source>
-        <translation>Последняя версия</translation>
+        <translation>Última versão </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="209"/>
         <source> already installed</source>
-        <translation>уже установлено</translation>
+        <translation>já instalado</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="214"/>
         <source> installed</source>
-        <translation>установлено</translation>
+        <translation>instalado</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="270"/>
         <source>Please wait till the database is loaded.</source>
-        <translation>Пожалуйста, ждите загрузки базы данных.</translation>
+        <translation>Aguarde até que a base de dados seja carregada.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="341"/>
         <source>About MX Debian Backports Installer</source>
-        <translation>О MX Установщике Debian Backports</translation>
+        <translation>Sobre o MX_Instalador de Atualizações Debian Retroactivas</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="342"/>
         <source>Version: </source>
-        <translation>Версия:</translation>
+        <translation>Versão: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="343"/>
         <source>App for installing directly from Debian Backports Repo</source>
-        <translation>Приложение для установки непосредственно из репозитория Debian Backports</translation>
+        <translation>Aplicação para fazer instalações directamente a partir do repositório de actualizções retroactivas Debian Backports Repo</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="345"/>
         <source>Copyright (c) MX Linux</source>
-        <translation>Авторское право (c) MX Linux</translation>
+        <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="346"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="347"/>
         <location filename="../mainwindow.cpp" line="349"/>
         <source>License</source>
-        <translation>Лицензия</translation>
+        <translation>Licença</translation>
     </message>
 </context>
 <context>
@@ -177,17 +177,17 @@
     <message>
         <location filename="../main.cpp" line="53"/>
         <source>Unable to get exclusive lock</source>
-        <translation>Не удалось получить свою блокировку</translation>
+        <translation>Não foi possível obter o bloqueio exclusivo</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="54"/>
         <source>Another package management application (like Synaptic or apt-get), is already running. Please close that application first</source>
-        <translation>Другое приложение управления пакетами (например, Synaptic или apt-get), уже работает. Пожалуйста, закройте сначала это приложение</translation>
+        <translation>Está em execussão outra aplicação de gestão de pacotes (p. ex. Synaptic ou apt-get). Primeiro feche a aplicação em execussão.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="67"/>
         <source>You must run this program as root.</source>
-        <translation>Вы должны запустить программу от имени суперпользователя.</translation>
+        <translation>Tem que executar este programa com a conta de raíz (root)</translation>
     </message>
 </context>
 </TS>

@@ -37,6 +37,8 @@ TRANSLATIONS += translations/mx-debian-backports-installer_ca.ts \
                 translations/mx-debian-backports-installer_ja.ts \
                 translations/mx-debian-backports-installer_nl.ts \
                 translations/mx-debian-backports-installer_pl.ts \
+                translations/mx-debian-backports-installer_pt.ts \
                 translations/mx-debian-backports-installer_ro.ts \
                 translations/mx-debian-backports-installer_ru.ts \
-                translations/mx-debian-backports-installer_sv.ts
+                translations/mx-debian-backports-installer_sv.ts \
+                translations/mx-debian-backports-installer_tr.ts
