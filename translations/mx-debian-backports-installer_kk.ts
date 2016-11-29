@@ -1,4 +1,4 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="fr" version="2.1">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="kk" version="2.1">
 <context>
     <name>MainWindow</name>
     <message>
@@ -7,42 +7,42 @@
         <location filename="../mainwindow.cpp" line="349"/>
         <location filename="../mainwindow.cpp" line="356"/>
         <source>MX Debian Backports Installer</source>
-        <translation>MX Installateur des paquets Debian rétroportés</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="78"/>
         <source>Package Name</source>
-        <translation>Nom du paquet</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="83"/>
         <source>Version</source>
-        <translation>Version</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="88"/>
         <source>Description</source>
-        <translation>Description</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="96"/>
         <source>Greyed out items have already been installed.</source>
-        <translation>Les paquets grisés ont déjà été installés.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="109"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Upgradable package. Newer version available in backports repository.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Paquet pouvant être mis à niveau. Une nouvelle version est disponible dans le dépôt de rétroportage.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="148"/>
         <source>Display help </source>
-        <translation>Afficher l&apos;aide</translation>
+        <translation>Көмекті көрсету</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="151"/>
         <source>Help</source>
-        <translation>Aide </translation>
+        <translation>Көмек</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="158"/>
@@ -52,12 +52,12 @@
     <message>
         <location filename="../mainwindow.ui" line="203"/>
         <source>About this application</source>
-        <translation>A propos de cette application</translation>
+        <translation>Бұл қолданба жөнінде</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
         <source>About...</source>
-        <translation>A propos...</translation>
+        <translation>Осы туралы...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="213"/>
@@ -67,12 +67,12 @@
     <message>
         <location filename="../mainwindow.ui" line="229"/>
         <source>Quit application</source>
-        <translation>Quitter l&apos;application</translation>
+        <translation>Қолданба жұмысын аяқтау</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="232"/>
         <source>Close</source>
-        <translation>Fermer</translation>
+        <translation>Жабу</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="239"/>
@@ -82,78 +82,78 @@
     <message>
         <location filename="../mainwindow.ui" line="277"/>
         <source>Install</source>
-        <translation>Installer</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="306"/>
         <source>search</source>
-        <translation>Rechercher</translation>
+        <translation>іздеу</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="117"/>
         <source>Warning</source>
-        <translation>Attention</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="118"/>
         <source>You are about to use Debian Backports, which contains packages taken from the next Debian release (called &apos;testing&apos;), adjusted and recompiled for usage on Debian stable. They cannot be tested as extensively as in the stable releases of Debian and MX Linux, and are provided on an as-is basis, with risk of incompatibilities with other components in Debian stable. Use with care!</source>
-        <translation>Vous êtes sur le point d&apos;utiliser le dépôt de rétroportage (Backports) de Debian . Celui-ci contient des paquets qui proviennent de la prochaine version de Debian (&apos;testing&apos;). Ils ont été modifiés et recompilés pour être inclus dans Debian &apos;stable&apos;. Par conséquent, ils n&apos;ont pas pu faire l&apos;objet de tests aussi poussés que pour les versions stables de Debian et de MX Linux et peuvent présenter des incompatibilités avec d&apos;autres composants de Debian &apos;stable&apos;. A utiliser avec précaution!</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="126"/>
         <source>Do not show this message again</source>
-        <translation>Ne plus afficher ce message</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="199"/>
         <location filename="../mainwindow.cpp" line="214"/>
         <source>Version </source>
-        <translation>Version</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="199"/>
         <source> in stable repo</source>
-        <translation>dans le dépôt stable</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="203"/>
         <source>Not available in stable repo</source>
-        <translation>Pas disponible dans le dépôt stable </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="209"/>
         <source>Latest version </source>
-        <translation>Version la plus recente</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="209"/>
         <source> already installed</source>
-        <translation>déjà installé</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="214"/>
         <source> installed</source>
-        <translation>installé</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="270"/>
         <source>Please wait till the database is loaded.</source>
-        <translation>Veuillez attendre que la base de données soit chargée.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="341"/>
         <source>About MX Debian Backports Installer</source>
-        <translation>À propos de MX Installateur des paquets de Debian Backports</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="342"/>
         <source>Version: </source>
-        <translation>Version: </translation>
+        <translation>Нұсқасы:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="343"/>
         <source>App for installing directly from Debian Backports Repo</source>
-        <translation>Application permettant d&apos;installer directement depuis le dépôt de rétroportage (Backports) de Debian</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="345"/>
@@ -163,13 +163,13 @@
     <message>
         <location filename="../mainwindow.cpp" line="346"/>
         <source>Cancel</source>
-        <translation>Annuler</translation>
+        <translation>Бас тарту</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="347"/>
         <location filename="../mainwindow.cpp" line="349"/>
         <source>License</source>
-        <translation>Licence</translation>
+        <translation>Лицензиясы</translation>
     </message>
 </context>
 <context>
@@ -177,17 +177,17 @@
     <message>
         <location filename="../main.cpp" line="53"/>
         <source>Unable to get exclusive lock</source>
-        <translation>Impossible d&apos;obtenir le verrou exclusif</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../main.cpp" line="54"/>
         <source>Another package management application (like Synaptic or apt-get), is already running. Please close that application first</source>
-        <translation>Une autre application servant à gérer les paquets (comme Synaptic ou apt-get) est déjà en cours d&apos;exécution. Veuillez d&apos;abord fermer cette application.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../main.cpp" line="67"/>
         <source>You must run this program as root.</source>
-        <translation>Vous devez lancer cette application avec les droits administrateur.</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 </TS>
