@@ -69,14 +69,16 @@ public:
 private slots:
     void closeSearch();
     void disableWarning(bool checked);
-    void search();
+
     void findPackage();
     void procTime();
-    void on_buttonCancel_clicked();
-    void on_buttonInstall_clicked();
+    void search();
     void on_buttonAbout_clicked();
-    void on_treeWidget_itemClicked(QTreeWidgetItem *item);
+    void on_buttonCancel_clicked();
     void on_buttonHelp_clicked();
+    void on_buttonInstall_clicked();    
+    void on_comboFilter_activated(const QString &arg1);
+    void on_treeWidget_itemClicked(QTreeWidgetItem *item);          
 
 private:
     LockFile *lock_file;

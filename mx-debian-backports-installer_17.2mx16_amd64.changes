@@ -1,0 +1,43 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Sun, 26 Feb 2017 18:38:34 -0500
+Source: mx-debian-backports-installer
+Binary: mx-debian-backports-installer
+Architecture: source amd64
+Version: 17.2mx16
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description:
+ mx-debian-backports-installer - mx-debian-backports-installer
+Changes:
+ mx-debian-backports-installer (17.2mx16) mx; urgency=medium
+ .
+   * added program filter
+Checksums-Sha1:
+ f72ecaf374f2d2b48547b0d40f75dd939a9d80d5 1319 mx-debian-backports-installer_17.2mx16.dsc
+ e01a4032b9fe21ff7ef875b04bb5599bd6ab1f69 96680 mx-debian-backports-installer_17.2mx16.tar.xz
+ 2f5017333ba3c7c6df9c91c6716275be869374b1 67754 mx-debian-backports-installer_17.2mx16_amd64.deb
+Checksums-Sha256:
+ cbfbcf9196dfdd2855f6f24a40293550ee6e51099e6e2a817c698ccaa6207abf 1319 mx-debian-backports-installer_17.2mx16.dsc
+ ea1e8b48a6d2dfbd3f2c3c177f409704d25653f8facce9c5e55a772b208a6f8e 96680 mx-debian-backports-installer_17.2mx16.tar.xz
+ b46e4a72139b769f5c206a4f0a0b98bb8515888d37e45fff9cf3b0e9fcefd3aa 67754 mx-debian-backports-installer_17.2mx16_amd64.deb
+Files:
+ b755f2f1e4e03d6daf0836a79d583953 1319 admin optional mx-debian-backports-installer_17.2mx16.dsc
+ 3aae5af65760668ce14fe682a2337863 96680 admin optional mx-debian-backports-installer_17.2mx16.tar.xz
+ 35d766a91f85aafbd5c5ecae8dc0ffc0 67754 admin optional mx-debian-backports-installer_17.2mx16_amd64.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJYs2lgAAoJEHCTjHgGee6YG7kH/i3CCXE6X3ZNoFLnA7b+9nfA
+po0gT4q5LPNBn8VJZsODSJVle91N8OcrPM7JZe2LSzFXIUnCX5rMQEilhKytHrOM
+JKjwh9iGr05IXuJreaB1gwocuHnmbwn6rGN/yXZhoRXoGUVMAUutJKNi/jrmThIO
+JCoafhRrv5hqf5n2qFki9WwujFDEWoY4U3PrBhYM3qgVjT4hzXprGnlX7cLjGPqP
+W4robvgiLZFsyGWyoo1aBwwlckpLLL8v8/gjEf1A5PoC2OOkA0GD6D9lSpLE8pvW
+DLxB4m+UlJiRD4WSTv8ocqsfygnKcXgAtP+s0pkxZok0ZbbmUs6xqdAvv440bD8=
+=wsK2
+-----END PGP SIGNATURE-----
