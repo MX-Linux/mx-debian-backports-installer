@@ -1,3 +1,9 @@
+mx-debian-backports-installer (17.2mx16) mx; urgency=medium
+
+  * added program filter
+
+ -- Adrian <adrian@mxlinux.org>  Sun, 26 Feb 2017 18:38:34 -0500
+
 mx-debian-backports-installer (16.11mx16+1) mx; urgency=medium
 
   * new translations

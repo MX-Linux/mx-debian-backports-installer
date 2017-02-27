@@ -47,8 +47,11 @@ MainWindow::MainWindow(QWidget *parent) :
         displayWarning();
     }
     ui->setupUi(this);
+    QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
     this->show();
     version = getVersion("mx-test-repo-installer");
+    ui->treeWidget->hideColumn(5); // Status of the package: installed, upgradable, etc
+    ui->treeWidget->hideColumn(6); // Displayed status true/false
     qApp->processEvents();
     ui->icon->setIcon(QIcon::fromTheme("software-update-available", QIcon("/usr/share/mx-debian-backports-installer/icons/software-update-available.png")));
     this->setWindowIcon(QIcon::fromTheme("application-x-deb", QIcon("/usr/share/mx-debian-backports-installer/icons/application-x-deb.png")));
@@ -89,6 +92,9 @@ QString MainWindow::getVersion(QString name)
 // populate list
 void MainWindow::start()
 {
+    ui->buttonInstall->setDisabled(true);
+    ui->comboFilter->setDisabled(true);
+
     displayMXlist(readMXlist());
 }
 
@@ -147,6 +153,7 @@ void MainWindow::displayMXlist(QStringList mxlist)
 
     //system("notify-send -i application-x-deb 'Test Repo Installer' 'List Packages'");
     ui->treeWidget->clear();
+    ui->comboFilter->setDisabled(true);
 
     // create a list of apps, create a hash with app_name, app_info
     foreach(item, mxlist) {
@@ -164,6 +171,7 @@ void MainWindow::displayMXlist(QStringList mxlist)
         widget_item->setText(2, app_name);
         widget_item->setText(3, app_ver);
         widget_item->setText(4, app_desc);
+        widget_item->setText(6, "true"); // all items are displayed till filtered
     }
     for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
         ui->treeWidget->resizeColumnToContents(i);
@@ -198,25 +206,34 @@ void MainWindow::displayMXlist(QStringList mxlist)
             for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
                 widget_item->setToolTip(i, tr("Version ") + candidate.toString() + tr(" in stable repo"));
             }
+            widget_item->setText(5, "not installed");
         } else if (installed.toString() == "") {
             for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
                 widget_item->setToolTip(i, tr("Not available in stable repo"));
             }
+            widget_item->setText(5, "not installed");
         } else {
             if (installed >= candidatetest) {
                 for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
                     widget_item->setDisabled(true);
+                    widget_item->setTextColor(i, Qt::blue);
                     widget_item->setToolTip(i, tr("Latest version ") + installed.toString() + tr(" already installed"));
                 }
+                widget_item->setText(5, "installed");
             } else {
                 widget_item->setIcon(1, QIcon::fromTheme("software-update-available", QIcon("/usr/share/mx-debian-backports-installer/icons/software-update-available.png")));
                 for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
                     widget_item->setToolTip(i, tr("Version ") + installed.toString() + tr(" installed"));
                 }
+                widget_item->setText(5, "upgradable");
             }
         }
         ++it;
     }
+    QApplication::setOverrideCursor(QCursor(Qt::ArrowCursor));
+    ui->comboFilter->setEnabled(true);
+    ui->buttonInstall->setEnabled(true);
+
 }
 
 // process keystrokes
@@ -251,7 +268,7 @@ void MainWindow::findPackage()
     QList<QTreeWidgetItem *> found_items = ui->treeWidget->findItems(word, Qt::MatchContains, 2);
     QTreeWidgetItemIterator it(ui->treeWidget);
     while (*it) {
-      if (found_items.contains(*it) ) {
+      if ((*it)->text(6) == "true" && found_items.contains(*it)) {
           (*it)->setHidden(false);
       } else {
           (*it)->setHidden(true);
@@ -282,6 +299,7 @@ void MainWindow::stopProgressBar()
 {
     timer->stop();
     disconnect(timer, SIGNAL(timeout()), 0, 0);
+    QApplication::setOverrideCursor(QCursor(Qt::BusyCursor));
     progress->close();
 }
 
@@ -307,16 +325,56 @@ void MainWindow::on_buttonInstall_clicked()
     }
     runCmd("echo deb http://ftp.debian.org/debian jessie-backports main contrib non-free>/etc/apt/sources.list.d/mxdebianbackporttemp.list");
     lock_file->unlock();
+    this->hide();
     runCmd("x-terminal-emulator -e apt-get update");
     runCmd("x-terminal-emulator -e apt-get -t jessie-backports install " + aptgetlist);
     runCmd("rm -f /etc/apt/sources.list.d/mxdebianbackporttemp.list");
     runCmd("x-terminal-emulator -e apt-get update");
+    this->show();
     lock_file->lock();
     changeset.clear();
     //qDebug() << changeset;
     closeSearch();
     start();
 }
+
+// filter items according to selected filter
+void MainWindow::on_comboFilter_activated(const QString &arg1)
+{
+    QList<QTreeWidgetItem *> found_items;
+    QTreeWidgetItemIterator it(ui->treeWidget);
+
+    if (arg1 == tr("All packages")) {
+        while (*it) {
+            (*it)->setText(6, "true"); // Displayed flag
+            (*it)->setHidden(false);
+            ++it;
+        }
+        findPackage();
+        return;
+    }
+
+    if (arg1 == tr("Upgradable")) {
+        found_items = ui->treeWidget->findItems("upgradable", Qt::MatchExactly, 5);
+    } else if (arg1 == tr("Installed")) {
+        found_items = ui->treeWidget->findItems("installed", Qt::MatchExactly, 5);
+    } else if (arg1 == tr("Not installed")) {
+        found_items = ui->treeWidget->findItems("not installed", Qt::MatchExactly, 5);
+    }
+
+    while (*it) {
+      if (found_items.contains(*it) ) {
+          (*it)->setHidden(false);
+          (*it)->setText(6, "true"); // Displayed flag
+      } else {
+          (*it)->setHidden(true);
+          (*it)->setText(6, "false");
+      }
+      ++it;
+    }
+    findPackage();
+}
+
 
 
 void MainWindow::on_treeWidget_itemClicked(QTreeWidgetItem *item)

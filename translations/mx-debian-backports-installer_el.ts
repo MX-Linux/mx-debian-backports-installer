@@ -5,9 +5,9 @@
     <name>MainWindow</name>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
-        <location filename="../mainwindow.cpp" line="342"/>
-        <location filename="../mainwindow.cpp" line="349"/>
-        <location filename="../mainwindow.cpp" line="356"/>
+        <location filename="../mainwindow.cpp" line="400"/>
+        <location filename="../mainwindow.cpp" line="407"/>
+        <location filename="../mainwindow.cpp" line="414"/>
         <source>MX Debian Backports Installer</source>
         <translation>Name=MX Debian Backports Installer</translation>
     </message>
@@ -27,149 +27,187 @@
         <translation>Περιγραφή</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="96"/>
-        <source>Greyed out items have already been installed.</source>
-        <translation>Γκριζαρισμένα στοιχεία έχουν ήδη εγκατασταθεί.</translation>
+        <location filename="../mainwindow.ui" line="93"/>
+        <source>Status</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="109"/>
+        <location filename="../mainwindow.ui" line="98"/>
+        <source>Displayed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Greyed out items have already been installed.</source>
+        <translation type="vanished">Γκριζαρισμένα στοιχεία έχουν ήδη εγκατασταθεί.</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="106"/>
+        <source>Disabled items (listed in blue) have already been installed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="119"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Upgradable package. Newer version available in backports repository.</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Δυνατότητα αναβάθμισης του πακέτου. Νεότερη έκδοση διαθέσιμη στο αποθετήριο backports.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="148"/>
+        <location filename="../mainwindow.ui" line="158"/>
         <source>Display help </source>
         <translation>Δείτε Βοήθεια</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="151"/>
+        <location filename="../mainwindow.ui" line="161"/>
         <source>Help</source>
         <translation>Βοήθεια </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="158"/>
+        <location filename="../mainwindow.ui" line="168"/>
         <source>Alt+H</source>
         <translation>Alt+H </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="203"/>
+        <location filename="../mainwindow.ui" line="213"/>
         <source>About this application</source>
         <translation>Περί εφαρμογής.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="206"/>
+        <location filename="../mainwindow.ui" line="216"/>
         <source>About...</source>
         <translation>Περί</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="213"/>
+        <location filename="../mainwindow.ui" line="223"/>
         <source>Alt+B</source>
         <translation>Alt+B</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="229"/>
+        <location filename="../mainwindow.ui" line="239"/>
         <source>Quit application</source>
         <translation>Κλείστε την εφαρμογή </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="232"/>
+        <location filename="../mainwindow.ui" line="242"/>
         <source>Close</source>
         <translation>Κλείσιμο</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="239"/>
+        <location filename="../mainwindow.ui" line="249"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="277"/>
+        <location filename="../mainwindow.ui" line="287"/>
         <source>Install</source>
         <translation>Εγκατάσταση </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="306"/>
+        <location filename="../mainwindow.ui" line="316"/>
         <source>search</source>
         <translation>aναζήτηση </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="117"/>
+        <location filename="../mainwindow.ui" line="330"/>
+        <location filename="../mainwindow.cpp" line="347"/>
+        <source>All packages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="335"/>
+        <location filename="../mainwindow.cpp" line="359"/>
+        <source>Installed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="340"/>
+        <location filename="../mainwindow.cpp" line="357"/>
+        <source>Upgradable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="345"/>
+        <location filename="../mainwindow.cpp" line="361"/>
+        <source>Not installed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="123"/>
         <source>Warning</source>
         <translation>Προειδοποίηση </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="118"/>
+        <location filename="../mainwindow.cpp" line="124"/>
         <source>You are about to use Debian Backports, which contains packages taken from the next Debian release (called &apos;testing&apos;), adjusted and recompiled for usage on Debian stable. They cannot be tested as extensively as in the stable releases of Debian and MX Linux, and are provided on an as-is basis, with risk of incompatibilities with other components in Debian stable. Use with care!</source>
         <translation>Είστε έτοιμοι να χρησιμοποιήσετε το Debian backports, το οποίο περιέχει πακέτα που λαμβάνονται από την επόμενη έκδοση του Debian (που ονομάζεται «testing»), με ρυθμίσεις και ανασύνθεσεις για χρήση στο Debian stable. Δεν μπορούν να ελεγχθούν ως εκτενώς και στις σταθερές εκδόσεις του Debian και το MX Linux, και παρέχονται πάνω σε ΩΣ ΕΧΕΙ βάση, με κίνδυνο ασυμβατότητες με άλλα συστατικά στο Debian stable. Χρησιμοποιήστε το με προσοχή!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="126"/>
+        <location filename="../mainwindow.cpp" line="132"/>
         <source>Do not show this message again</source>
         <translation>Να μην εμφανιστεί ξανά αυτό το μήνυμα</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="199"/>
-        <location filename="../mainwindow.cpp" line="214"/>
+        <location filename="../mainwindow.cpp" line="207"/>
+        <location filename="../mainwindow.cpp" line="226"/>
         <source>Version </source>
         <translation>Έκδοση</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="199"/>
+        <location filename="../mainwindow.cpp" line="207"/>
         <source> in stable repo</source>
         <translation>σε stable αποθετήριο</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="203"/>
+        <location filename="../mainwindow.cpp" line="212"/>
         <source>Not available in stable repo</source>
         <translation>Δεν διατίθεται σε </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="209"/>
+        <location filename="../mainwindow.cpp" line="220"/>
         <source>Latest version </source>
         <translation>Τελευταία έκδοση</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="209"/>
+        <location filename="../mainwindow.cpp" line="220"/>
         <source> already installed</source>
         <translation>ήδη εγκαταστημένο </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="214"/>
+        <location filename="../mainwindow.cpp" line="226"/>
         <source> installed</source>
         <translation>εγκαταστημένο</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="270"/>
+        <location filename="../mainwindow.cpp" line="287"/>
         <source>Please wait till the database is loaded.</source>
         <translation>Παρακαλώ περιμένετε μέχρι να φορτωθεί η βάση δεδομένων.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="341"/>
+        <location filename="../mainwindow.cpp" line="399"/>
         <source>About MX Debian Backports Installer</source>
         <translation>Περί MX Debian Backports Installer</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="342"/>
+        <location filename="../mainwindow.cpp" line="400"/>
         <source>Version: </source>
         <translation>Έκδοση:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="343"/>
+        <location filename="../mainwindow.cpp" line="401"/>
         <source>App for installing directly from Debian Backports Repo</source>
         <translation>Λογισμικό για την εγκατάσταση απευθείας από Debian Backports Repo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="345"/>
+        <location filename="../mainwindow.cpp" line="403"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c)  MX Linux </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="346"/>
+        <location filename="../mainwindow.cpp" line="404"/>
         <source>Cancel</source>
         <translation>Ακύρωση</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="347"/>
-        <location filename="../mainwindow.cpp" line="349"/>
+        <location filename="../mainwindow.cpp" line="405"/>
+        <location filename="../mainwindow.cpp" line="407"/>
         <source>License</source>
         <translation>Άδεια</translation>
     </message>
