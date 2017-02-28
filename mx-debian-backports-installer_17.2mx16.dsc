@@ -13,20 +13,20 @@ Build-Depends: debhelper (>= 7.0.50~), dpkg-dev (>= 1.16.1.1), qtbase5-dev, qtto
 Package-List:
  mx-debian-backports-installer deb admin optional arch=any
 Checksums-Sha1:
- e01a4032b9fe21ff7ef875b04bb5599bd6ab1f69 96680 mx-debian-backports-installer_17.2mx16.tar.xz
+ 8bba38fde6283f0c1429f9198de44f9d02e9b324 31612 mx-debian-backports-installer_17.2mx16.tar.xz
 Checksums-Sha256:
- ea1e8b48a6d2dfbd3f2c3c177f409704d25653f8facce9c5e55a772b208a6f8e 96680 mx-debian-backports-installer_17.2mx16.tar.xz
+ b993f42fac7392ff5c631dc1da01e377c2f500ed5acffbd9facfa5cf6f18ac69 31612 mx-debian-backports-installer_17.2mx16.tar.xz
 Files:
- 3aae5af65760668ce14fe682a2337863 96680 mx-debian-backports-installer_17.2mx16.tar.xz
+ 9b6704f2b3e17309de40f34ef5424075 31612 mx-debian-backports-installer_17.2mx16.tar.xz
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iQEcBAEBAgAGBQJYs2k5AAoJEHCTjHgGee6Y+f4H/RTcV+jBL10ThdvWWAhgPC46
-FT92u6WciDebQEfjhngkpgTUxvLufdJpktHjsU25iKLBy3wRNjIOfhNMphPZl5Ix
-PSSJyLJUwWvBaDYJq9woQmifcNJBSgyxtOH3y2mZ6L/aY/1JoJTakdckCikdxAUH
-Ewop/q3CDVG98xIjoTf7TmCwd796XqTtijQvj1qsXXFZ1cDBWi/6j28SHWy65dsT
-TNWSwUgz7AMYsiK6SY9nPJZoQylr2z/R7E99wuZP6oQ8gHny7FKqeeLHPkFvVSzK
-5Y57bIs+AMHxDrMnK1SrUy9RJqcllcLzFs26ZMBfXuYAYJwuK5bGr/U4xp4Mb5E=
-=2OsE
+iQEcBAEBAgAGBQJYtX4VAAoJEHCTjHgGee6YOnEIAJkjN4WEHCv7z2U1K3kb58dH
+L+Ry/QZTGVWr3JuPgNhZFCtkexAvpQoBqBkJuVEzkry8uU35/VcGkUhS5+3YIvOe
+LbDHa+WSiZGcTSL77z2sQCY7a0Udwqcuj3IH0LB5frywVskGugk7dEg7ST+ckuGQ
+bo1+NePAEpjG5zhJPC9EGxj/FrSs/mX3ftaXy/APJvxJWdvWPUHL4LOiSsZWouS7
++Z0Ab39/7I1npwfr9dfDGDLWoxyEj7A8dkLki3ddLsnMDu/yzsSltGPl9TS+sJtz
+EIERC0xc8VuwzH1BNsc6HdfQ/gnBVjJ6OG/ZYQk2T3hYoygjvcmWQpqqyTaeCl8=
+=0M0g
 -----END PGP SIGNATURE-----

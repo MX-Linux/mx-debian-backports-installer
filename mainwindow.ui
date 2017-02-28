@@ -103,7 +103,7 @@
      <item row="2" column="1" colspan="3">
       <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>Disabled items (listed in blue) have already been installed.</string>
+        <string>Greyed out items have already been installed.</string>
        </property>
        <property name="margin">
         <number>0</number>
