@@ -216,7 +216,6 @@ void MainWindow::displayMXlist(QStringList mxlist)
             if (installed >= candidatetest) {
                 for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
                     widget_item->setDisabled(true);
-                    widget_item->setTextColor(i, Qt::blue);
                     widget_item->setToolTip(i, tr("Latest version ") + installed.toString() + tr(" already installed"));
                 }
                 widget_item->setText(5, "installed");
