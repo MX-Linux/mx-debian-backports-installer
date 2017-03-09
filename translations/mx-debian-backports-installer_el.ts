@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="el" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="el">
 <context>
     <name>MainWindow</name>
     <message>
@@ -27,12 +29,12 @@
     <message>
         <location filename="../mainwindow.ui" line="93"/>
         <source>Status</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="98"/>
         <source>Displayed</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="106"/>
@@ -103,25 +105,25 @@
         <location filename="../mainwindow.ui" line="330"/>
         <location filename="../mainwindow.cpp" line="346"/>
         <source>All packages</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="335"/>
         <location filename="../mainwindow.cpp" line="358"/>
         <source>Installed</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="340"/>
         <location filename="../mainwindow.cpp" line="356"/>
         <source>Upgradable</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="345"/>
         <location filename="../mainwindow.cpp" line="360"/>
         <source>Not installed</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="123"/>
