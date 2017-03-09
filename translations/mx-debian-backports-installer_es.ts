@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="es">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="es" version="2.1">
 <context>
     <name>MainWindow</name>
     <message>
@@ -9,7 +7,7 @@
         <location filename="../mainwindow.cpp" line="406"/>
         <location filename="../mainwindow.cpp" line="413"/>
         <source>MX Debian Backports Installer</source>
-        <translation>MX Instalador de Debian Backports</translation>
+        <translation>MX Debian Backports, instalador</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="78"/>
@@ -29,12 +27,12 @@
     <message>
         <location filename="../mainwindow.ui" line="93"/>
         <source>Status</source>
-        <translation type="unfinished"></translation>
+        <translation>Estado</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="98"/>
         <source>Displayed</source>
-        <translation type="unfinished"></translation>
+        <translation>Desplegado</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="106"/>
@@ -44,7 +42,7 @@
     <message>
         <location filename="../mainwindow.ui" line="119"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Upgradable package. Newer version available in backports repository.</source>
-        <translation>Paquete actualizable. Versión más nueva disponible en repositorio de backports.</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;=Paquete actualizable. Versión más nueva disponible en repositorio de backports.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="158"/>
@@ -105,25 +103,25 @@
         <location filename="../mainwindow.ui" line="330"/>
         <location filename="../mainwindow.cpp" line="346"/>
         <source>All packages</source>
-        <translation type="unfinished"></translation>
+        <translation>Todos los paquetes</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="335"/>
         <location filename="../mainwindow.cpp" line="358"/>
         <source>Installed</source>
-        <translation type="unfinished"></translation>
+        <translation>Instalado</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="340"/>
         <location filename="../mainwindow.cpp" line="356"/>
         <source>Upgradable</source>
-        <translation type="unfinished"></translation>
+        <translation>Actualizable</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="345"/>
         <location filename="../mainwindow.cpp" line="360"/>
         <source>Not installed</source>
-        <translation type="unfinished"></translation>
+        <translation>No instalado</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="123"/>
